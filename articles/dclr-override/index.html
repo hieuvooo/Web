@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<title>DClr_Override &#8211; dayt0n</title>
+<meta name="description" content="And so, the low-level programming begins...">
+<meta name="keywords" content="iBoot, DClr, low-level, iPhone 5, xerub, override, ClrC, Syscfg, nvram">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="DClr_Override &#8211; dayt0n">
+<meta property="og:description" content="And so, the low-level programming begins...">
+<meta property="og:url" content="/articles/dclr-override">
+<meta property="og:site_name" content="dayt0n">
+
+
+<link href="../../feed.xml" type="application/atom+xml" rel="alternate" title="dayt0n Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../assets/css/entypo.css" media="all">
+
+<link rel="stylesheet" href="../../assets/css/i.css">
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<script src="../../assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="../../index.html">dayt0n</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="../../index.html" title="dayt0n">Home</a>
+            </li>
+            
+            
+                <li><a href="../../about/index.html" >about</a></li>
+            
+                <li><a href="https://github.com/dayt0n" target="_blank">github</a></li>
+            
+                <li><a href="https://ipsw.me/" target="_blank">ipsw links</a></li>
+            
+                <li><a href="../../downloads/index.html" >downloads</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article">
+
+
+  <div class="overlay"></div>
+  
+  <div class="featured-image" style="background-image: url(../../images/techpaper6.png)"></div>
+  
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>DClr_Override</h1>
+            <p class="date">Feb 10, 2015</p>
+            <p class="intro">And so, the low-level programming begins...</p>
+          </hgroup>
+        </header>
+
+        <h1 id="update">Update:</h1>
+<p>So I hear a lot of you have bricked your devices using this method. I am sorry. I put the hefty disclaimer here for a reason. The following devices work (if you enter the correct nvram variables exactly and triple check): iPhone 5, iPhone 5S, iPhone 6, iPhone 6 plus, iPad Mini 2, iPad Air, iPad Air 2. Other than that, I have no idea what other devices work with this. Devices that definately do <code>not</code> work are the iPhone 2G-4S, the iPhone 5C, and the iPad1-3. Not sure about the iPad 4 though, but do not try it. Comment which devices work for you, but DO NOT TEST IT. I would suggest steering clear of here if you do not see your device above, but hey, if you want to potentially ruin your device, go ahead.</p>
+
+<h2 id="explanation-of-dclr">Explanation of DClr</h2>
+<p><code>DClr</code> is a variable inside of iBoot that determines what color the Apple logo should be on boot. It only exists on the iPhone 5 and up. It is composed of 32 hex characters, consisting of 16 bytes. <code>DClr</code> determines the color of the logo until SpringBoard begins to launch. Once SpringBoard launches, it uses a different method to determine device color, probably <code>libMobileGestalt.dylib</code>, which is responsible for determining disk usage, UDID, serial number, device version, and unfortunately for us, the real color. On the black (or space grey) iPhone, the default “black” logo is: <img src="../../images/blacklogo.png" alt="blacklogo" /> On the white, silver, or gold iPhone, the default “white” logo is: <img src="../../images/whitelogo.png/index.html" alt="whitelogo.png" /></p>
+
+<p>Here is a video of it in action:</p>
+
+<center><iframe width="420" height="315" src="https://www.youtube.com/embed/Q59eyFqzjjM" frameborder="0" allowfullscreen=""></iframe></center>
+
+<h3 id="algorithm">Algorithm</h3>
+<p>A device determines the boot color using the algorithm: <code>DClr_override</code> is read from an <code>nvram</code> variable. If it is not present, than it attempts to read <code>DClr</code> from <code>Syscfg</code>. If <code>DClr</code> is not in <code>Syscfg</code>, it is read from <code>ClrC</code>.</p>
+
+<h3 id="clrc">ClrC</h3>
+<p><code>ClrC</code> seems to only really matter on the iPhone 5. This is just because <code>DClr</code> is not readable from <code>Syscfg</code> on the iPhone 5, therefore it is the only thing telling <code>iBoot</code> what color to boot with. When reading <code>ClrC</code> from <code>Syscfg</code>, it will print out one of these strings:</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">ClrC</span><span class="p">:</span> <span class="mo">00000000000000000000000000000000</span>
+<span class="nl">ClrC</span><span class="p">:</span> <span class="mo">01000000000000000000000000000000</span></code></pre></div>
+
+<p>This basically translates to <code>ClrC[0]</code>: default black iPhone logo and <code>ClrC[1]</code>: default white iPhone logo.</p>
+
+<h2 id="how-to-change-the-logo">How To Change the Logo</h2>
+
+<h1 id="disclaimer">Disclaimer</h1>
+<p>I am not responsible for any damage that may happen to any devices because of this method. I have only tested this on iPhones and not any iPads. It does not work on any device below an iPhone 5. The top of this page has an update with device lists of what works and what doesn’t work. If you do not follow this guide <code>exactly</code>, you WILL permanently brick your device. No tether boot or restore, for that matter, will help you if you mess up. Good luck!</p>
+
+<h3 id="jailbreak">1. Jailbreak</h3>
+<p>A jailbreak is needed to edit <code>nvram</code> variables. Jailbreak and install OpenSSH or some other tool to access the command line (I highly suggest OpenSSH though, so you can easily copy and paste the following code from your computer). TRIPLE check all of the code you execute in this process. I cannot stress this enough.</p>
+
+<h3 id="edit-nvram">2. Edit nvram</h3>
+<p>Acess the command line using the preferred method from above and copy and paste the following commands <code>exactly</code>. If you are using an black or space grey iPhone and want to get the “white” logo, execute</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">nvram</span> <span class="n">DClr_override</span><span class="o">=</span><span class="mo">00020000</span><span class="n">D8D9D700E3E4E10000000000</span></code></pre></div>
+
+<p>If you are using a white, silver, or gold iPhone and want the “black” logo, execute</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">nvram</span> <span class="n">DClr_override</span><span class="o">=</span><span class="mo">00020000</span><span class="mi">9</span><span class="n">B9899003C3B3B0000000000</span></code></pre></div>
+
+<p>Now, to test it, reboot!</p>
+
+<h3 id="changing-back-to-default">Changing Back to Default</h3>
+<p>Since this is hardcoded into <code>iBoot</code>, an iTunes restore will not set it back to default. To reset it, you must still be jailbroken and be able to access the command line. Execute the command</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">nvram</span> <span class="o">-</span><span class="n">d</span> <span class="n">DClr_override</span></code></pre></div>
+
+<p>Reboot and it should be back to normal.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Messing with low-level components such as iBoot is very dangerous. If you were to mess up the above method <code>iBoot</code>, would refuse to load the <code>DeviceTree</code>. This will brick it permanently. The only thing your phone would be good for is either a paper weight or parts. And remember, this is just for educational and research purposes. If you think you are going to try this, it is probably not worth the risk.</p>
+
+<h3 id="special-thanks-to-xerubhttptwittercomxerub">Special Thanks To <a href="http://twitter.com/xerub">@xerub</a></h3>
+
+<center><h3>-dayt0n</h3></center>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=%22DClr_Override%22%20http://dayt0n.com/articles/dclr-override%20via%20@daytonhasty" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../assets/js/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+
+      </article>
+
+    </section>
+</div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+            <li>
+              <span class="recent-title"><a href="../Odysseus/index.html" title="Odysseus">Odysseus </a></span>
+              <span class="date">Jun 08, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="index.html" title="DClr_Override">DClr_Override </a></span>
+              <span class="date">Feb 10, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../my-new-direction/index.html" title="My New Direction">My New Direction </a></span>
+              <span class="date">Feb 01, 2015</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="../../cdn-cgi/l/email-protection.html#c0a4a1b9b4f0ae80a4a1b9b4f0aeeea3afad"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/daytonhasty" target="_blank"><span class="foot-link">@daytonhasty</span></a></li>
+            
+            
+
+
+
+            
+        </ul>
+    </div>
+    </aside>
+    <center><h5>BTC: 1PUxBGti9U7vXcr64UkvtcLD25axzVh1ER</h5></center>
+
+    <small>&copy; 2017 dayt0n.</small>
+  </footer>
+
+  <script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script><script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="../../assets/js/retina.min.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
+
+
+  </body>
+
+</html>
+

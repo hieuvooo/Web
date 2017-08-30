@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<title>Downgrade Method &#8211; dayt0n</title>
+<meta name="description" content="Over Christmas break, I found a method to tether downgrade an iPhone 4.">
+<meta name="keywords" content="downgrade, iPhone 4, limera1n, redsn0w, iFaith, iTunes">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Downgrade Method &#8211; dayt0n">
+<meta property="og:description" content="Over Christmas break, I found a method to tether downgrade an iPhone 4.">
+<meta property="og:url" content="/articles/downgrade-method">
+<meta property="og:site_name" content="dayt0n">
+
+
+<link href="../../feed.xml" type="application/atom+xml" rel="alternate" title="dayt0n Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../assets/css/entypo.css" media="all">
+
+<link rel="stylesheet" href="../../assets/css/i.css">
+
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<script src="../../assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="../../index.html">dayt0n</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="../../index.html" title="dayt0n">Home</a>
+            </li>
+            
+            
+                <li><a href="../../about/index.html" >about</a></li>
+            
+                <li><a href="https://github.com/dayt0n" target="_blank">github</a></li>
+            
+                <li><a href="https://ipsw.me/" target="_blank">ipsw links</a></li>
+            
+                <li><a href="../../downloads/index.html" >downloads</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article">
+
+
+  <div class="overlay"></div>
+  
+  <div class="featured-image" style="background-image: url(../../images/techpaper4.png)"></div>
+  
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>Downgrade Method</h1>
+            <p class="date">Jan 04, 2015</p>
+            <p class="intro">Over Christmas break, I found a method to tether downgrade an iPhone 4.</p>
+          </hgroup>
+        </header>
+
+        <h2 id="disclaimer">Disclaimer</h2>
+<center>[Update]: I have fixed the bug mentioned below. I am now working on an easier method of just downloading the iPSW file and restoring to it with iTunes 11.</center>
+
+<p>I am not responsible for any damage that may occur if you do not follow these directions correctly. I am also currently fixing the only bug I have found so far. Please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#097;&#121;&#116;&#111;&#110;&#104;&#097;&#115;&#116;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;&#063;&#115;&#117;&#098;&#106;&#101;&#099;&#116;&#061;&#068;&#111;&#119;&#110;&#103;&#114;&#097;&#100;&#101;&#037;&#050;&#048;&#066;&#117;&#103;">tell me about any bugs you find</a>.</p>
+
+<h2 id="preparation">1. Preparation</h2>
+<p>First, please do a fresh restore on your phone with a default, signed iPSW. Set it up and then continue. To configure your iTunes to accept the downgrade ipsw, you must install iTunes 11 (<a href="http://api.ios.icj.me/v2/iTunes/Windows/11/url/dl">32 bit</a> | <a href="http://api.ios.icj.me/v2/iTunes/Windows/11/64biturl/dl">64 bit</a>). Once the iTunes 11 installer has downloaded, go into your Music folder and you will find the iTunes folder. Rename it to iTunes_orig. Then, you must go to ControlPanel&gt;Uninstall a Program. Uninstall iTunes. Then run the iTunes 11 installer.</p>
+
+<p>Next, you will need to download the following items. Unzip if it is a zip file. I suggest you keep them on your desktop to have them easily accessible:</p>
+
+<ul>
+  <li><a href="https://ipsw.me/" target="_blank">The iPSW file you want to downgrade to</a> (Select iPhone 4 Model) If you are downgrading to iOS 6, download the <strong>6.0</strong> iPSW, not the one you want to downgrade to.</li>
+  <li><a href="https://github.com/iH8sn0w/iREB-2.0/releases/r7/1097/ireb-r7.zip">iReb</a></li>
+  <li><a href="http://www.jailbreaktools.com/downloads/windows/redsn0w-0.9.15b3.zip">Redsn0w 0.9.15 Beta 3</a></li>
+  <li><a href="https://github.com/iH8sn0w/iFaith/releases/v1.5.9/1085/ifaith-v1.5.9.zip">iFaith</a></li>
+  <li><a href="https://t.co/zmwiaLqXae">SHSH Blobs</a></li>
+</ul>
+
+<h2 id="downgrade-ipsw-creation">2. Downgrade iPSW Creation</h2>
+<p>Now, fire up iFaith and select <code>OK</code> and then <code>Build *signed* IPSW w/ Blobs</code>. Click <code>Browse for SHSH Blobs</code> and select the universal blob I sent you after you requested it from me. iFaith will verify the blob and take you to a screen asking you to either <code>Browse for an IPSW</code> or <code>Download it for me</code>. Click <code>Dowload it for me</code>. After it is done downloading, it will build the downgrade iPSW file. It will then bring you to a screen telling you that iFaith has successfully built your iPSW file. Click <code>Ok</code>. iFaith will then display a window with a picture of an iPhone turning off. You can exit out at this point and continue to the next step.</p>
+
+<h2 id="enter-pwned-dfu-mode">3. Enter PWNed DFU Mode</h2>
+<p>Plug your phone into your computer. If iTunes opens, exit out. Turn off your phone. Then, open up iReb and select iPhone 4 and follow the instructions to enter DFU Mode. DFU Mode looks like a blank screen on your phone. Next, iReb will exploit your phone using the <a href="http://dayt0n.github.io/articles/what-is-limera1n/">limera1n</a> exploit and your phone will enter PWNed DFU Mode. PWNed DFU Mode looks the same as DFU Mode. Once this is done, open up iTunes and it should tell you the iPhone is in Recovery Mode. This is good.</p>
+
+<h2 id="downgrade">4. Downgrade!</h2>
+<p>Now, hold down the Shift key and click <code>Restore iPhone</code>. Select the iFaith iPSW file you built earlier and the downgrade should start. <strong>Note that this does erase all content on the iPhone.</strong> You can exit out of iReb now. Now, just wait until the progess bar on the iPhone fills completely and iTunes either gives you an error at the end of the restore or a message saying the restore was completed. If you do get an error at that point, then it doesn’t matter, the downgrade has worked. Your phone should now either boot back into DFU Mode or Recovery Mode. It should not go into userland. You can exit out of iTunes now.</p>
+
+<h2 id="boot">5. Boot!</h2>
+<p>As I said before, this is a tethered downgrade meaning you have to boot the iPhone up from the computer every time you turn it off and back on again. You should now open up the redns0w application. Now, if your phone is in Recovery Mode (the iTunes Logo with a cable under it), put it into DFU Mode. If you need help, use <a href="http://www.jbfaq.com/article.asp?id=60" target="_blank">this article</a>. Otherwise, your phone should be in DFU Mode already if it is not in Recovery Mode. Select <code>Extras</code>. Click <code>Select iPSw</code> and select the iPSW file you downloaded in the first section of this article. Redsn0w should tell you that it has successfully identified iPSW. Now, in redsn0w, select <code>Just Boot</code>. Remember, since this is tethered you must repeat this step everytime you reboot/turn it on after a power off or dead battery.</p>
+
+<center><h1>Congrats, you just downgraded :)</h1></center>
+
+<h1 id="technical-details">Technical Details</h1>
+<p>For people who would like to verbose boot instead of just a pineapple bootlogo, you can open Redsn0w, select <code>Extras</code>, <code>Even more</code>, <code>Preferences</code>, <code>Boot args</code>, and type in <code>-v</code>. Then, when you boot with redsn0w, you get a verbose boot.</p>
+
+<h1 id="how-it-works">How it Works</h1>
+<p>Every time an iOS device restores/boots with iTunes, it checks the random <code>nonce</code> string generated at boot. If everything checks out, then the APTicket is sent from iTunes servers and the restore is given the okay to continue. If the <code>nonce</code> string does not check out, then the restore will fail, making downgrading impossible if you use a default iPSW because iTunes does not find the APTicket for that particular <code>nonce</code> initiation. With this method, the using a universal SHSH blob, the restore checks out and iTunes likes the iPSW from iFaith. But it is tethered because as soon as you power it back on, another random <code>nonce</code> string is generated and the device will refuse to boot. That is why you use redsn0w to exploit it with <a href="http://dayt0n.github.io/articles/what-is-limera1n/">limera1n</a> and forcefully boots it. This method does not jailbreak it, but gives you the option to. If you would like to jailbreak it, just use redsn0w. <strong>This method works also on an iPod touch 3rd generation by the way.</strong></p>
+
+<h2 id="overview">Overview</h2>
+<p>I have been using this method on my iPhone 4 (3,3) to have iOS 6.1.2 on it. I personally like iOS 6 on an iPhone 4 just because it is so much faster and fluid than iOS 7. iOS 7 is too laggy and heavy on the iPhone 4. Don’t worry, if this method seems too difficult, just know that I am working on a way to fix the bugs I have told you about and just have you boot into PWNed DFU Mode and restore with iTunes and boot with redsn0w. I will basically just start mass producing iPSW files for every firmware of every iPhone 4 and iPod touch 3rd generation. Sound off in the comments about what you think of this tutorial. And as for an untether, I have enough work as it is with making this simpler and with school. An untether is not off of my to-do list though, I will tell you that :)</p>
+
+<h1 id="credits">Credits</h1>
+<ul>
+  <li>Thanks to <a href="https://twitter.com/CPVideoMaker">CPVideoMaker</a> for help with SHSH blobs and bug aid</li>
+  <li>Thanks to <a href="https://twitter.com/iH8sn0w/">iH8sn0w</a> for iReb and iFaith</li>
+  <li>The <a href="https://twitter.com/iphone_dev">iPhone Dev Team</a> for redsn0w</li>
+</ul>
+
+<center><h3>-dayt0n</h3></center>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=%22Downgrade%20Method%22%20http://dayt0n.com/articles/downgrade-method%20via%20@daytonhasty" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../assets/js/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+
+      </article>
+
+    </section>
+</div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+            <li>
+              <span class="recent-title"><a href="../Odysseus/index.html" title="Odysseus">Odysseus </a></span>
+              <span class="date">Jun 08, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../dclr-override/index.html" title="DClr_Override">DClr_Override </a></span>
+              <span class="date">Feb 10, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../my-new-direction/index.html" title="My New Direction">My New Direction </a></span>
+              <span class="date">Feb 01, 2015</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="../../cdn-cgi/l/email-protection.html#6f0b0e161b5f012f0b0e161b5f01410c0002"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/daytonhasty" target="_blank"><span class="foot-link">@daytonhasty</span></a></li>
+            
+            
+
+
+
+            
+        </ul>
+    </div>
+    </aside>
+    <center><h5>BTC: 1PUxBGti9U7vXcr64UkvtcLD25axzVh1ER</h5></center>
+
+    <small>&copy; 2017 dayt0n.</small>
+  </footer>
+
+  <script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script><script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="../../assets/js/retina.min.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
+
+
+  </body>
+
+</html>
+

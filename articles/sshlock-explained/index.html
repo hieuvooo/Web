@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<title>SSHLock Explained &#8211; dayt0n</title>
+<meta name="description" content="SSHLock is a command-line utility I created after finding a bug in com.apple.purplebuddy.">
+<meta name="keywords" content="sshlock, iOS, iOS 8, explained">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="SSHLock Explained &#8211; dayt0n">
+<meta property="og:description" content="SSHLock is a command-line utility I created after finding a bug in com.apple.purplebuddy.">
+<meta property="og:url" content="/articles/sshlock-explained">
+<meta property="og:site_name" content="dayt0n">
+
+
+<link href="../../feed.xml" type="application/atom+xml" rel="alternate" title="dayt0n Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../assets/css/entypo.css" media="all">
+
+<link rel="stylesheet" href="../../assets/css/i.css">
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<script src="../../assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="../../index.html">dayt0n</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="../../index.html" title="dayt0n">Home</a>
+            </li>
+            
+            
+                <li><a href="../../about/index.html" >about</a></li>
+            
+                <li><a href="https://github.com/dayt0n" target="_blank">github</a></li>
+            
+                <li><a href="https://ipsw.me/" target="_blank">ipsw links</a></li>
+            
+                <li><a href="../../downloads/index.html" >downloads</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article">
+
+
+  <div class="overlay"></div>
+  
+  <div class="featured-image" style="background-image: url(../../images/techpaper3.jpg)"></div>
+  
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>SSHLock Explained</h1>
+            <p class="date">Jan 03, 2015</p>
+            <p class="intro">SSHLock is a command-line utility I created after finding a bug in com.apple.purplebuddy.</p>
+          </hgroup>
+        </header>
+
+        <h2 id="sshlock-the-name">SSHLock: The Name</h2>
+<p><a href="http://cydia.saurik.com/package/com.dayt0n.sshlock/">SSHLock</a> is called what it is because it can be used over <code>SSH</code> or SecureShell. SSH is a protocol that allows you to remotely execute code and transfer files over a wireless network. The package <a href="http://cydia.saurik.com/package/openssh/">OpenSSH</a> enables this feature. Of course, you could always use an on-device application to execute this code such as <a href="http://cydia.saurik.com/package/mobileterminal-applesdk/">MobileTerminal</a>. But that would be silly because you have a lock button or AssistiveTouch right there.</p>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>SSHLock uses a feature inside com.apple.purplebuddy, or the Setup.app. If you hook into and read syslog’s output as you lock the device, you will get something along the lines of:</p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">backboardd</span><span class="p">[</span><span class="mi">87</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="nl">ALS</span><span class="p">:</span> <span class="nl">SetDisplayFactor</span><span class="p">:</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.0000</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">kernel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="nl">AppleMultitouchN1SPI</span><span class="p">:</span> <span class="n">updating</span> <span class="n">power</span> <span class="n">statistics</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">SpringBoard</span><span class="p">[</span><span class="mi">1305</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Warning</span><span class="o">&gt;:</span> <span class="p">[</span><span class="n">MPUSystemMediaControls</span><span class="p">]</span> <span class="n">Disabling</span> <span class="n">lock</span> <span class="n">screen</span> <span class="n">media</span> <span class="n">controls</span> <span class="n">updates</span> <span class="k">for</span> <span class="n">screen</span> <span class="n">turning</span> <span class="n">off</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">backboardd</span><span class="p">[</span><span class="mi">87</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="nl">MultitouchHID</span><span class="p">:</span> <span class="n">detection</span> <span class="nl">mode</span><span class="p">:</span> <span class="mi">3</span><span class="o">-&gt;</span><span class="mi">255</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">SpringBoard</span><span class="p">[</span><span class="mi">1305</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="p">(</span><span class="n">Note</span> <span class="p">)</span> <span class="nl">MC</span><span class="p">:</span> <span class="n">Locking</span> <span class="n">device</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">UserEventAgent</span><span class="p">[</span><span class="mi">66</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Error</span><span class="o">&gt;:</span>  <span class="n">LockStateNotifier</span> <span class="n">aksNotificationCallback</span> <span class="n">posting</span> <span class="nl">notification</span><span class="p">:</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">mobile</span><span class="p">.</span><span class="n">keybagd</span><span class="p">.</span><span class="n">lock_status</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">UserEventAgent</span><span class="p">[</span><span class="mi">66</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Error</span><span class="o">&gt;:</span>  <span class="n">LockStateNotifier</span> <span class="n">aksNotificationCallback</span> <span class="n">posting</span> <span class="nl">notification</span><span class="p">:</span> <span class="n">com</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">mobile</span><span class="p">.</span><span class="n">keybagd</span><span class="p">.</span><span class="n">lock_status</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">SpringBoard</span><span class="p">[</span><span class="mi">1305</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="p">(</span><span class="n">Note</span> <span class="p">)</span> <span class="nl">MC</span><span class="p">:</span> <span class="n">Locking</span> <span class="n">device</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">UserEventAgent</span><span class="p">[</span><span class="mi">66</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="p">(</span><span class="n">Note</span> <span class="p">)</span> <span class="nl">PIH</span><span class="p">:</span> <span class="n">Lock</span> <span class="n">status</span> <span class="n">changed</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">UserEventAgent</span><span class="p">[</span><span class="mi">66</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Notice</span><span class="o">&gt;:</span> <span class="p">(</span><span class="n">Note</span> <span class="p">)</span> <span class="nl">PIH</span><span class="p">:</span> <span class="n">Lock</span> <span class="n">status</span> <span class="n">changed</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">SpringBoard</span><span class="p">[</span><span class="mi">1305</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Warning</span><span class="o">&gt;:</span> <span class="n">Telling</span> <span class="n">backboard</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">secure</span> <span class="n">lock</span> <span class="n">screen</span><span class="p">.</span>
+<span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">20</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">51</span> <span class="n">Dayt0ns</span><span class="o">-</span><span class="n">iPhone</span> <span class="n">SpringBoard</span><span class="p">[</span><span class="mi">1305</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">Warning</span><span class="o">&gt;:</span> <span class="n">Telling</span> <span class="n">backboard</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">secure</span> <span class="n">lock</span> <span class="n">screen</span><span class="p">.</span></code></pre></div>
+
+<p>I was playing with Conrad Kramer’s utility <a href="http://cydia.saurik.com/package/com.conradkramer.open/">Open</a> and I found the bundle identifier for the Setup.app. Curious about what would happen if I opened an app that was only supposed to be opened once, I used Kramer’s tool on the bundle identifier: com.apple.purplebuddy. While hooked into syslog and executing the program, I noticed that it printed out the same log as above. Seeing my oppritunity to create a program that would not inject foreign code and safely lock the device, how could I resist? I created the utility so it opens up com.apple.purplebuddy and then, 0.5 seconds later (after lock process has been initiated), it kills Setup.app. So when you unlock your device, there is no trace of it ever being opened and you feel safe.</p>
+
+<h4 id="number-of-times-sshlock-has-been-downloaded">Number of Times SSHLock Has Been Downloaded:</h4>
+<p></p>
+<script type="text/javascript" src="http://modmyi.com/cstats/index.php?package=com.dayt0n.sshlock&amp;output=text"></script>
+
+<center><h3>-dayt0n</h3>
+</center>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=%22SSHLock%20Explained%22%20http://dayt0n.com/articles/sshlock-explained%20via%20@daytonhasty" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../assets/js/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+
+      </article>
+
+    </section>
+</div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+            <li>
+              <span class="recent-title"><a href="../Odysseus/index.html" title="Odysseus">Odysseus </a></span>
+              <span class="date">Jun 08, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../dclr-override/index.html" title="DClr_Override">DClr_Override </a></span>
+              <span class="date">Feb 10, 2015</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../my-new-direction/index.html" title="My New Direction">My New Direction </a></span>
+              <span class="date">Feb 01, 2015</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="../../cdn-cgi/l/email-protection.html#680c09111c5806280c09111c5806460b0705"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/daytonhasty" target="_blank"><span class="foot-link">@daytonhasty</span></a></li>
+            
+            
+
+
+
+            
+        </ul>
+    </div>
+    </aside>
+    <center><h5>BTC: 1PUxBGti9U7vXcr64UkvtcLD25axzVh1ER</h5></center>
+
+    <small>&copy; 2017 dayt0n.</small>
+  </footer>
+
+  <script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script><script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="../../assets/js/retina.min.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
+
+
+  </body>
+
+</html>
+
