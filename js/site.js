@@ -1,4 +1,4 @@
-var serverURL = "https://hieuvooo.github.io/";
+var serverURL = "https://tsssaver.1conan.com/";
 				function getJSON(url) {
 					var request = new XMLHttpRequest(),
 						data;
