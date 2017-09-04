@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="vi">
+
+<meta charset="utf-8">
+<title>Hướng Dẫn Cài macOS High Sierra Trên VMware &#8211; Hieuvo</title>
+<meta name="description" content="Hướng Dẫn Cài macOS High Sierra Trên VMware">
+<meta name="keywords" content="Hướng Dẫn, macOS, macOS High Sierra Trên VMware, Cài, High Sierra, Trên">
+
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Hướng Dẫn Cài macOS High Sierra Trên VMware &#8211; Hieuvo">
+<meta property="og:description" content="Hướng Dẫn Cài macOS High Sierra Trên VMware">
+<meta property="og:url" content="/articles/dclr-override">
+<meta property="og:site_name" content="Hieuvo">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../../assets/css/entypo.css" media="all">
+<link rel="stylesheet" href="../../assets/css/i.css">
+<script src="../../assets/js/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<script src="../../assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<div id="bump">
+  <body class="">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="../../index.html">Hieuvo</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class="icons">☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+             <a href="../../index.html" title="Hieuvo">Home</a>
+            </li>
+            <li>
+             <a href="../../downloads/index.html">downloads</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article">
+
+
+  <div class="overlay"></div>
+  
+  <div class="featured-image" style="background-image: url(/../../images/down-up-macOS/maxresdefault.jpg)"></div>
+  
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1 id="top">Downgrade/Upgrade iOS Đã Khóa Sign (Jailbreak) Trên Linux</h1>
+            <p class="date">SEP 03, 2017</p>
+            <p class="intro">Upgrade một phiên bản iOS thì không hề khó đối với hầu hết người dùng, còn để Downgrade một phiên bản iOS thì chuyện này sẽ ko thể xảy ra  một khi Apple đã khóa Sign nó. Tuy nhiên một công cụ có tên Futurerestore aka Prometheus đã được phát hành bởi Hacker <a href="https://goo.gl/JtAkM6" target="_blank">@tihmstar</a>, nó giúp bạn có thể Downgrade một phiên bản iOS đã khóa Sign nếu như bạn có SHSH2 Blobs cho phiên bản đó</p>
+          </hgroup>
+        </header>
+
+<b><hr><span style="color: rgb(0, 0, 0);"></span></b>
+
+<center><h3>Vậy công cụ này làm được gì?</h3></center>
+<ul>
+  <li>Upgrade/Downgrade bất cứ iOS nào nếu như bạn có SHSH2 Blobs của nó (Trong phạm vi iOS 10)</li>
+  <li>Ví dụ Máy mình đang chạy iOS 10.2 giờ mình muốn Downgrade xuống 10.1.1 thì mình xẽ lấy file SHSH2 của 10.1.1 rồi chạy Futurerestore thì xẽ xuống được 10.1.1</li>
+</ul>
+
+<center><h3>LƯU Ý</h3></center>
+<p>Cần có <strong>SHSH2 blobs</strong> phù hợp cho phiên bản cần <strong>Downgrade/Upgrade</strong>. Nếu như bạn chưa lưu SHSH2 Blobs cho phiên bản của mình thì bạn không thể làm nửa vì <strong>Apple đã khóa Sign tất cả iOS từ 10.3.2 trở xuống</strong>. Nếu bạn chưa lưu thì xem hướng dẫn này</p>
+<p>Công cụ này chỉ hổ trợ <strong>macOS và Linux</strong>, Windows không được hổ trợ (<a href="../Install-macOS/Hướng Dẫn Cài macOS Trên VMware.html" target="_blank">Bạn có thể cài macOS/Linux trên VMware</a>)</p>
+<p>Công cụ này chỉ hoạt động trên các thiết bị <strong>64bit (iPhone 5s trở lên)</strong> và sẽ ko hoạt động trên<strong> iPhone 7/7 Plus, 8 (kể cả có SHSH2 Blobs)</strong></p>
+<p><strong>Khi chạy công cụ này sẽ xóa toàn bộ dữ liệu của bạn. Nên nhớ hãy backup trên iTunes nếu như bạn muốn dữ liệu ko bị mất</strong></p>
+<p><strong>Và tất nhiên iDevice của bạn bắt buộc phải JAILBREAK khi sử dụng công cụ này</strong></p>
+
+<b><hr><span style="color: rgb(0, 0, 0);"></span></b>
+
+<center><h3 id="download">Futurerestore</h3></center> 
+<ul>
+  <li>Futurestore: <a href="https://goo.gl/96wALA" target="_blank">Download</a></li>
+  <li>iOS: <a href="https://goo.gl/fmFNiS" target="_blank">Download</a></li>
+  <li>libpng12: <a href="https://goo.gl/hzco2d" target="_blank">Download (64bit)</a> / <a href="https://goo.gl/QoPmzH" target="_blank">Download (32bit)</a></li>
+</ul> 
+
+<b><hr><span style="color: rgb(0, 0, 0);"></span></b>
+
+<center><p>Mình sẽ Upgrade iPhone 5S trên iOS 10.1.1 lên 10.2</p></center>
+<h3>1. Chuẩn bị files</h3>
+<p>1.1 Tạo một Folder tên là <strong>Futurerestore</strong>. Đây là thư mục bạn để tất cả các files để dễ thuận tiện trong quá trình làm</p>
+<p>1.2 Giải nén file <strong>futurerestore-latest.zip</strong> và copy file<strong> futurerestore_linux</strong> vào thư mục trên</p>
+<img src="../../images/down-up-Linux/1.png"/>
+<p>1.3 Thêm <strong>.zip </strong>vào đuôi file<strong> iOS 10.3.3</strong> và nhấn Rename</p>
+<img src="../../images/down-up-Linux/2.png"/>
+<p>1.4 Mở file đó và Copy file <strong>BuildManifest.plist</strong> vào thư mục <strong>Futurerestore </strong></p>
+<img src="../../images/down-up-Linux/3.png"/>
+<p id="basebandver">1.5 Nhớ số <strong>Baseband Version</strong> để Copy file <strong>baseband </strong></p>
+<img src="../../images/down-up-Linux/baseband-table-10.3.1-1.png"/>
+<p>1.6 Tiếp tục vào thư mục <strong>Firmware</strong> và Copy file baseband của bạn có đuôi là <strong>.bbfw</strong> vào thư mục Futurerestore. Chọn số phiên bản baseband <strong>gần nhất với baseband version</strong> ở <a class="nav-link scroll" href="#basebandver"><strong>bước 1.5 </strong></a>. Baseband version của mình là 7.51.00 vậy mình chọn file Mav7Mav8-7.60.00.bbfw </p>
+<img src="../../images/down-up-Linux/4.png"/>
+<p id="devicemodel">1.7 Trên điện thoại tải <a href="https://goo.gl/w923tJ" target="_blank">Battery Memory System Status Monitor</a> về. Mở ứng dụng và chọn phần <strong>System</strong> ngay trên cùng, bạn sẽ thấy <strong>Device Model</strong> của bạn</p>
+</p> 
+  <img src="../../images/down-up-Linux/bkasia133650_17439627_1755372944778427_20522616_n.jpg"/>
+  <p>1.8 Tiếp tục vào thư mục <strong>all_flash</strong>, kéo xuống dưới cùng sẽ thấy một loạt file có tên là <strong>sep-firmware</strong>, Copy file sep có đuôi <strong>.imp4</strong> trùng với <strong>Device model </strong>của bạn ở <a class="nav-link scroll" href="#devicemodel"><strong>bước 1.7 </strong></a> vào thư mục Futurerestore. Ví dụ Device Model của mình là N53AP thì mình sẽ chọn file sep-firmware.n53ap.RELEASE.imp4</p>
+  <img src="../../images/down-up-Linux/5.png"/>
+  <p>1.9 Nếu bạn lưu SHSH2 Blob ở bài này thì unzip và chọn thư mục iOS bạn muốn Upgrade/Downgrade. Mở thư mục <strong>noapnonce</strong> và copy file có đuôi là .shsh2 vào thư mục Futurerestore.</p>
+  <img src="../../images/down-up-Linux/6.png"/>
+  <p>1.10 Mở file SHSH2 của bạn vào kéo xuống dưới cùng bạn sẽ thấy dòng <strong>&lt;string&gt;0x.....................&lt;/string&gt;</strong>. Bây giờ mở điện thoại bạn lên vào <strong>Cydia</strong> tiềm kiếm <strong>Mterminal </strong>và cài đặt. </p>
+  <img src="../../images/down-up-Linux/7.png"/>
+  <p>1.11 Mở Mterminal trên điện thoại và gõ</p>
+  <div class="highlight"><pre><code class="language-c" data-lang="c">Hieus-iphone:~ mobile$ su <br>password: alpine <br>Hieus-iphone:/var/mobile root# nvram com.apple.System.boot-nonce=0x.....'  </code></pre></div>
+  <p>Ví dụ máy mình có key là <strong>0x44f2b31f093900e8</strong> thì sẽ là <strong>nvram com.apple.System.boot-nonce=0x44f2b31f093900e8</strong></p>
+  <img src="../../images/down-up-Linux/2017_09_03_9CCD85B5-335A-40DF-A5B7-4AF71698D612.PNG"/>
+  <p>Gõ <strong>nvram -p</strong> để check lại</p>
+  <img src="../../images/down-up-Linux/2017_09_03_4B2D10B6-E439-4539-85C0-FF832816F249.PNG"/>
+  <p>1.12 Đây là tất cả những gì bạn cần. Những file<strong> .zip </strong>nãy bạn có thể xóa đi cho đỡ rối</p>
+  <img src="../../images/down-up-Linux/8.png"/>
+  <p>1.13 Chọn <strong>futurerestore_linux</strong> và <strong>nhấp chuột phải chọn Properties</strong>. Click qua phần <strong>Permission</strong> chọn <strong>Allow executing file as program</strong></p>
+  <img src="../../images/down-up-Linux/9.png"/>
+  <p>1.14 Mở terminal gõ và đợi cho nó chạy xong hết</p>
+  <div class="highlight"><pre><code class="language-c" data-lang="c">sudo apt-get install gdebi</code></pre></div>  
+  <img src="../../images/down-up-Linux/10.png"/>
+  <p>1.15 Sau khi tải <a class="nav-link scroll" href="#download"><strong>libpng12 </strong></a> nhấp chuột phải chọn <strong>Open With</strong> rồi chọn <strong>GDebi Package Installer</strong></p>
+  <img src="../../images/down-up-Linux/11.png"/>
+  <p id="package1">1.16 Chọn <strong>Install Package</strong> và đợi cho nó cài đặt xong</p>
+  <img src="../../images/down-up-Linux/12.png"/>
+  <p id="package2">1.17 Mở Terminal trên máy tính gõ và nhấn Enter rồi nhập Password máy tính bạn</p>
+  <div class="highlight"><pre><code class="language-c" data-lang="c">sudo apt-get install libzip4</code></pre></div>  
+  <img src="../../images/down-up-Linux/13.png"/>
+  <h3>2. Bắt đầu Downgrade/Upgrade</h3>
+  <p>2.1 Nhớ cd vào thư mục nơi để thư mục Futurerestore của bạn. Gõ để check futurerestore hoạt động chưa</p>
+  <div class="highlight"><pre><code class="language-c" data-lang="c">./futurerestore_linux</code></pre></div> 
+  <p>Nếu hiện không đúng như hình thì check lại <a class="nav-link scroll" href="#package1"><strong>bước 1.16 </strong></a> và <a class="nav-link scroll" href="#package2"><strong>bước 1.17 </strong></a></p> 
+  <img src="../../images/down-up-Linux/14.png"/>
+  <p>2.2 <strong>Kiểm tra lại dây cáp có lõng không nếu có thì đổi lấy dây khác nhé. </strong>Trên terminal gõ và nhấn enter</p>
+  <div class="highlight"><pre><code class="language-c" data-lang="c">./futurerestore_macos -t &lt;iOS SHSH2 blob&gt; -b &lt;Baseband file&gt; -p BuildManifest.plist -s &lt;SEP file&gt; -m BuildManifest.plist -w &lt;iOS IPSW File&gt;(dấu "&lt;&gt;" là tên file của bạn). </code></pre></div>
+  <p>Ví dụ của mình là: sudo ./futurerestore_linux -t 0000000000_iPhone6,2_10.2-14C92.shsh2 -b Mav7Mav8-7.60.00.Release.bbfw -p BuildManifest.plist -s sep-firmware.n53.RELEASE.im4p -m BuildManifest.plist -w iPhone_4.0_64bit_10.2_14C92_Restore.ipsw</p> 
+  <img src="../../images/down-up-Linux/15.png"/>
+  <center><p>Máy đã vào recovery mode và đang giải nén file hệ thống trong ipsw</p></center>  
+  <img src="../../images/down-up-Linux/16.png"/>
+  <center><p>Sẽ có tùy lúc futurerestore không nhận được proxy, bạn cứ mặt kệ, futurerestore sẽ tự tiềm</p></center>  
+  <img src="../../images/down-up-Linux/17.png"/>
+  <center><p>Terminal báo Status: restoring finished thì có nghĩa là thành công rồi, bạn rút cáp ra để cho máy chạy rồi setup thôi</p></center>  
+  <img src="../../images/down-up-Linux/18.png"/> 
+  
+<b><hr><span style="color: rgb(0, 0, 0);"></span></b>
+
+  <center>
+    <h3>Thành quả</h3>
+    <a href="https://goo.gl/se1rcy" target="_blank"><strong>Terminal log</strong></a>
+  </center>
+  <img src="../../images/down-up-Linux/2017_09_04_IMG_0002.PNG"/>                
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script>
+<center><h3>-Hieuvo-</h3></center>
+</article>
+</section>
+</body></div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+            <li>
+              <span class="recent-title"><a href="../down-up-macOS/Downgrade-Upgrade cho macOS.html" title="Downgrade/Upgrade iOS Đã Khóa Sign (Jailbreak) Trên macOS">Downgrade/Upgrade iOS Đã Khóa Sign (Jailbreak) Trên macOS</a></span>
+              <span class="date">SEP 02, 2017</span>
+            </li>
+            <li>
+              <span class="recent-title"><a class="nav-link scroll" href="#top">Downgrade/Upgrade iOS Đã Khóa Sign (Jailbreak) Trên Linux </a></span>
+              <span class="date">SEP 03, 2017</span>
+            </li>
+            <li>
+              <span class="recent-title"><a href="../Install-macOS/Hướng Dẫn Cài macOS Trên VMware.html" title="Hướng Dẫn Cài macOS Trên VMware.html">Hướng Dẫn Cài macOS Trên VMware </a></span>
+              <span class="date">Aug 31, 2017</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="face" href="https://www.facebook.com/Hieuvooo" target="_blank"><span class="foot-link">fb.com/hieuvooo</span></a></li> 
+        </ul>
+    </div>
+    </aside>
+    <small>&copy; 2017 Hieuvo.</small>
+  </footer>
+
+  <script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script><script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="../../assets/js/retina.min.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
+</html>
