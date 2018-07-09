@@ -1,53 +1,412 @@
-<!DOCTYPE html>
-<html class="no-js" dir="ltr" lang="en-US" prefix="og: http://ogp.me/ns#">
+<!doctype html>
+<html lang="en" class="no-js">
+
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<meta charset="utf-8">
-	<link href="index.html" rel="canonical">
-	<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
-	<title>Apple Events - WWDC Keynote, June 2018 - Apple</title>
-	<link href="css/event-page-june-2018.built.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="vendor/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="vendor/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/main.css"> <!-- css file compiled of scss files -->
+	<script src="vendor/js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Hieuvo | Front Page</title>
 </head>
-<body class="page-june-2018">
-	<div class="event-page">
-		<div class="recap-tile-list" data-analytics-region="learn more">
-			<div class="recap-tile recap-tile-ios" data-analytics-section-engagement="name:ios12">
-				<div class="recap-tile-copy">
-					<div class="recap-tile-headline-wrapper">
-						<h3 class="recap-tile-headline typography-hero-headline">iOS 12</h3>
+<body>
+	<!-- HEADER -->
+	<header class="cd-intro-block">
+		<div class="cd-content-wrapper container">
+			<nav>
+				<!--Logo-->
+				<a href="index.html">
+					<svg id="logo" viewBox="0 0 204 54">
+					    <defs></defs>
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="70" font-family="Lato-Light, Lato" font-weight="300">
+					    </g>
+					</svg>
+				</a>
+
+				<!--Dark/Light Mode toggle button-->
+				<div class="toggle-container">
+					<div class="toggle-switch">
+					  <input type="checkbox" id="toggle"/>
+					  <label for="toggle">
+							<div class="sun-icon">
+								<svg viewBox="0 0 12 12">
+										<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<g id="dark-mode" transform="translate(-1006.000000, -68.000000)" fill="#FFFFFF">
+														<g id="HEADER" transform="translate(0.000000, -1.000000)">
+																<g id="nav" transform="translate(108.000000, 60.000000)">
+																		<g id="mode-toggle" transform="translate(898.000000, 0.000000)">
+																				<g id="weather-sun" transform="translate(0.000000, 9.000000)">
+																						<path d="M6,1.56521739 C6.144,1.56521739 6.26086957,1.44834783 6.26086957,1.30434783 L6.26086957,0.260869565 C6.26086957,0.116869565 6.144,0 6,0 C5.856,0 5.73913043,0.116869565 5.73913043,0.260869565 L5.73913043,1.30434783 C5.73913043,1.44834783 5.856,1.56521739 6,1.56521739 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M6.26086957,11.7391304 L6.26086957,10.6956522 C6.26086957,10.5516522 6.144,10.4347826 6,10.4347826 C5.856,10.4347826 5.73913043,10.5516522 5.73913043,10.6956522 L5.73913043,11.7391304 C5.73913043,11.8831304 5.856,12 6,12 C6.144,12 6.26086957,11.8831304 6.26086957,11.7391304 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M10.6956522,6.26086957 L11.7391304,6.26086957 C11.8831304,6.26086957 12,6.144 12,6 C12,5.856 11.8831304,5.73913043 11.7391304,5.73913043 L10.6956522,5.73913043 C10.5516522,5.73913043 10.4347826,5.856 10.4347826,6 C10.4347826,6.144 10.5516522,6.26086957 10.6956522,6.26086957 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M0.260869565,6.26086957 L1.30434783,6.26086957 C1.44834783,6.26086957 1.56521739,6.144 1.56521739,6 C1.56521739,5.856 1.44834783,5.73913043 1.30434783,5.73913043 L0.260869565,5.73913043 C0.116869565,5.73913043 0,5.856 0,6 C0,6.144 0.116869565,6.26086957 0.260869565,6.26086957 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M9.32034783,2.94052174 C9.38713043,2.94052174 9.45391304,2.91495652 9.50504348,2.86434783 L10.2433043,2.12608696 C10.3450435,2.02434783 10.3450435,1.85895652 10.2433043,1.75721739 C10.1415652,1.65547826 9.97617391,1.65547826 9.87443478,1.75721739 L9.13565217,2.49547826 C9.03391304,2.59721739 9.03391304,2.7626087 9.13565217,2.86434783 C9.18678261,2.91495652 9.25356522,2.94052174 9.32034783,2.94052174 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M1.94191304,10.3189565 C2.00869565,10.3189565 2.07547826,10.2933913 2.1266087,10.2427826 L2.86486957,9.50452174 C2.9666087,9.40278261 2.9666087,9.2373913 2.86486957,9.13565217 C2.76313043,9.03391304 2.59773913,9.03391304 2.496,9.13565217 L1.75773913,9.87391304 C1.656,9.97565217 1.656,10.1410435 1.75773913,10.2427826 C1.80834783,10.2933913 1.87513043,10.3189565 1.94191304,10.3189565 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M9.50452174,9.13565217 C9.40278261,9.03391304 9.2373913,9.03391304 9.13565217,9.13565217 C9.03391304,9.2373913 9.03391304,9.40278261 9.13565217,9.50452174 L9.87391304,10.2427826 C9.92504348,10.293913 9.99182609,10.3189565 10.0586087,10.3189565 C10.1253913,10.3189565 10.1921739,10.2933913 10.2433043,10.2427826 C10.3450435,10.1410435 10.3450435,9.97565217 10.2433043,9.87391304 L9.50452174,9.13565217 Z" id="Shape" fill-rule="nonzero"></path>
+																						<path d="M2.49547826,2.86434783 C2.54608696,2.91495652 2.61286957,2.94052174 2.67965217,2.94052174 C2.74643478,2.94052174 2.81321739,2.91495652 2.86434783,2.86434783 C2.96608696,2.7626087 2.96608696,2.59721739 2.86434783,2.49547826 L2.12608696,1.75721739 C2.02434783,1.65547826 1.85895652,1.65547826 1.75721739,1.75721739 C1.65547826,1.85895652 1.65547826,2.02434783 1.75721739,2.12608696 L2.49547826,2.86434783 Z" id="Shape" fill-rule="nonzero"></path>
+																						<circle id="Oval-3" cx="6" cy="6" r="3"></circle>
+																				</g>
+																		</g>
+																</g>
+														</g>
+												</g>
+										</g>
+								</svg>
+							</div>
+							<div class="moon-icon">
+								<svg viewBox="0 0 12 12">
+										<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<g id="dark-mode" transform="translate(-1089.000000, -69.000000)" fill="#FFFFFF">
+														<g id="HEADER" transform="translate(0.000000, -1.000000)">
+																<g id="nav" transform="translate(108.000000, 60.000000)">
+																		<g id="mode-toggle" transform="translate(898.000000, 0.000000)">
+																				<g id="weather-moon" transform="translate(83.000000, 10.000000)">
+																						<path d="M5.3575,0.000416666667 C5.28708333,-0.00416666667 5.2175,0.0266666667 5.175,0.0845833333 C5.1325,0.1425 5.1225,0.2175 5.14875,0.284166667 C5.32166667,0.72625 5.40916667,1.18625 5.40916667,1.65166667 C5.40916667,3.72333333 3.72375,5.40916667 1.65166667,5.40916667 C1.18625,5.40916667 0.72625,5.32166667 0.284166667,5.14875 C0.2175,5.1225 0.1425,5.1325 0.0845833333,5.175 C0.0270833333,5.2175 -0.00458333333,5.28625 0.000416666667,5.3575 C0.189583333,7.96083333 2.38166667,10 4.99125,10 C7.75291667,10 10,7.75291667 10,4.99125 C10,2.38166667 7.96083333,0.189583333 5.3575,0.000416666667 Z M4.99125,9.58333333 C2.70708333,9.58333333 0.77125,7.87875 0.450833333,5.64666667 C0.8425,5.76541667 1.24541667,5.82541667 1.65166667,5.82541667 C3.95333333,5.82541667 5.82583333,3.95291667 5.82583333,1.65125 C5.82583333,1.24458333 5.76583333,0.842083333 5.64708333,0.450416667 C7.87875,0.77125 9.58333333,2.70666667 9.58333333,4.99125 C9.58333333,7.52333333 7.52333333,9.58333333 4.99125,9.58333333 Z" id="Shape" fill-rule="nonzero"></path>
+																						<polygon id="Path-2" points="5.51574707 0.256164551 7.40356445 0.776855469 8.73706055 1.91943359 9.72241211 3.62353516 9.8125 5.43652344 9.19580078 7.44091797 8.39331055 8.53076172 7.37817383 9.18164062 5.88085938 9.69262695 4.36621094 9.75 3.41723633 9.48706055 2.33520508 8.97949219 1.57861328 8.34741211 0.950439453 7.31689453 0.486328125 6.37597656 0.2578125 5.41967773 1.76757813 5.62988281 3.00366211 5.52124023 4.37231445 4.59570313 5.10205078 3.66870117 5.65917969 2.27929687 5.65844727 0.871582031"></polygon>
+																				</g>
+																		</g>
+																</g>
+														</g>
+												</g>
+										</g>
+								</svg>
+							</div>
+					  </label>
 					</div>
-					<p class="typography-intro recap-tile-subhead large-centered">FaceTime up to 32 people. Share AR experiences with friends. And be more&nbsp;aware of how you and your kids&nbsp;use&nbsp;apps.</p>
-					<p class="typography-intro"><a href="apple-events/Beta-Access/iOS_12_Beta_Profile.mobileconfig"><span>Download</span></a></p>
+				</div>
+				<div class="nav-links">
+					<a href="#0" data-action="aboutme_content" class="cd-btn">Contact</a>
+				</div>
+			</nav>
+			<div  class="content">
+				<h1>Hieuvo's<br>Website.</h1>
+                <div class="letter">H</div>
+			</div>
+			<a class="arrow-bottom cd-btn bounce" data-action="show-items"></a>
+		</div>
+	</header>
+
+	<!-- PROJECT SLIDER SCREEN -->
+	<div class="cd-items-wrapper">
+		<!--<a href="#0" class="cd-btn close-btn" data-action="close-items"></a>-->
+
+		<!-- SLIDER -->
+		<ul class="cd-slider" style="width: 3823px; transform: translateX(0px);">
+			<li class="slides-in current">
+				<a data-action="item1_content" href="#0"><img alt="item image" src="resources/img/iOS.png">
+				<div class="item-info">
+					<h2>
+						iOS
+					</h2>
+					<p>
+						<span>Downgrade/Upgrade iOS Unsigned</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a data-action="item2_content" href="#0"><img alt="item image" src="resources/img/encrypt.png">
+				<div class="item-info">
+					<h2>
+						Staticrypt
+					</h2>
+					<p>
+						<span>Encrypt HTML</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in" style="opacity: 1;">
+				<a data-action="item3_content" href="#0"><img alt="item image" src="resources/img/beta.png">
+				<div class="item-info">
+					<h2>
+						Apple Beta Software Program
+					</h2>
+					<p>
+						<span>iOS, macOS, watchOS, and tvOS</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in nav_hover" style="opacity: 0.4;">
+				<a data-action="item4_content" href="#0"><img alt="item image" src="resources/img/html.png">
+				<div class="item-info">
+					<h2>
+						HTML
+					</h2>
+					<p>
+						<span>Online HTML Builder</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a href="https://hieuvo.me/repo/" target="_blank"><img alt="item image" src="resources/img/repo.png">
+				<div class="item-info">
+					<h2>
+						Hieuvo's Repo
+					</h2>
+					<p>
+						<span>Cydia Repository</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a data-action="item6_content" href="#0"><img alt="item image" src="resources/img/cloud.png">
+				<div class="item-info">
+					<h2>
+						Hieuvo's File
+					</h2>
+					<p>
+						<span>Online Files Manager</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a data-action="item7_content" href="#0"><img alt="item image" src="resources/img/Purple-Lake.png">
+				<div class="item-info">
+					<h2>
+						Theme
+					</h2>
+					<p>
+						<span>J2team Facebook Theme</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a data-action="item8_content" href="#0"><img alt="item image" src="resources/img/empty.png">
+				<div class="item-info">
+					<h2>
+						Empty
+					</h2>
+					<p>
+						<span>A Beautiful Empty Website</span>
+					</p>
+				</div></a>
+			</li>
+			<li class="slides-in">
+				<a data-action="item9_content" href="#0"><img alt="item image" src="resources/img/translate.png">
+				<div class="item-info">
+					<h2>
+						Translate
+					</h2>
+					<p>
+						<span>Bộ cuyển dổi Tiếq Việt</span>
+					</p>
+				</div></a>
+			</li>
+		</ul>	
+
+		<!-- SLIDER ARROWS -->
+		<ul class="cd-slider-navigation cd-img-replace">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next inactive">Next</a></li>
+		</ul> <!-- .cd-slider-navigation -->
+
+	</div> <!-- .cd-projects-wrapper -->
+	
+    <!-- ABOUT PAGE -->
+	<div class="cd-item-content" id="aboutme_content">
+		<div>
+			<!-- HEADER-->
+			<div class="header-bg">
+				<div class="container">
+					<nav>
+						<a href="#0" class="close cd-img-replace">Close</a>
+					</nav>
+					<div class="project-info">
+						<h1>Hieuvo</h1>
+
+					</div>
 				</div>
 			</div>
-			<div class="recap-tile recap-tile-macos" data-analytics-section-engagement="name:macos">
-				<div class="recap-tile-copy">
-					<div class="recap-tile-headline-wrapper">
-						<h3 class="recap-tile-headline typography-hero-headline"><strong>macOS</strong>&nbsp;Mojave</h3>
-					</div>
-					<p class="typography-intro recap-tile-subhead large-centered">Stay focused on your work with Dark&nbsp;Mode. Edit and share files without opening them. And explore a completely redesigned Mac&nbsp;App&nbsp;Store.</p>
-					<p class="typography-intro"><a href="apple-events/Beta-Access/macOSDeveloperBetaAccessUtility.dmg"><span class="icon-shim">Download</span></a></p>
-				</div>
-			</div>
-			<div class="recap-tile recap-tile-watchos" data-analytics-section-engagement="name:watchos">
-				<div class="recap-tile-copy">
-					<div class="recap-tile-headline-wrapper">
-						<h3 class="recap-tile-headline typography-hero-headline">watchOS 5</h3>
-					</div>
-					<p class="typography-intro recap-tile-subhead large-centered">Challenge someone to an Activity competition. Track brand-new workouts, including yoga. And&nbsp;use Walkie-Talkie to connect with&nbsp;friends.</p>
-					<p class="typography-intro"><a href="apple-events/Beta-Access/watchOS_5_Beta_Profile.mobileconfig"><span class="icon-shim">Download</span></a></p>
-				</div>
-			</div>
-			<div class="recap-tile recap-tile-tvos" data-analytics-section-engagement="name:tvos">
-				<div class="recap-tile-copy">
-					<div class="recap-tile-headline-wrapper">
-						<h3 class="recap-tile-headline typography-hero-headline"><span class="visuallyhidden">Apple TV 4K</span></h3>
-					</div>
-					<p class="typography-intro recap-tile-subhead large-centered">Immerse yourself in Dolby Atmos 3D sound. Watch TV shows and movies in 4K HDR. And&nbsp;tune in to live news&nbsp;and&nbsp;sports.</p>
-					<p class="typography-intro"><a href="apple-events/Beta-Access/tvOS_12_Beta_Profile.mobileconfig"><span class="icon-shim">Download</span></a></p>
+
+			<!-- MAIN CONTENT-->
+			<div class="container">
+				<div class="content">
+					<h2>Contact me via</h2><br>
+					<a class="button" href="mailto:me@hieuvo.me" target="_blank">Business Mail</a>
+					<a class="button" href="mailto:support@hieuvo.me" target="_blank">Personal Mail</a>
+					<a class="button" href="http://m.me/hieuvo.me" target="_blank">Facebook</a>
+					<a class="button" href="https://www.youtube.com/channel/UCKVb9nyxT-u1SxVe9KJnEKA" target="_blank">Youtube</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- DETAIL PAGES -->
+	<div class="cd-item-content" id="item1_content">
+		<div>
+			<!-- HEADER-->
+			<div class="header-bg">
+				<div class="container">
+					<nav><a href="#0" class="close cd-img-replace">Close</a></nav>
+					<div class="project-info">
+						<h1>iOS Unsigned</h1>
+						<p class="tags"><span>iOS</span></p>
+						<p class="description">Upgrade một phiên bản iOS thì không hề khó đối với hầu hết người dùng, Downgrade một phiên bản iOS thì chuyện này sẽ ko thể xảy ra một khi Apple đã khóa Sign. Tuy nhiên một công cụ có tên Futurerestore (Prometheus) đã được phát hành bởi <a href="https://twitter.com/tihmstar" target="_blank">@tihmstar</a>, nó giúp bạn có thể Downgrade/Upgrade một phiên bản iOS đã khóa Sign nếu như bạn có SHSH2 Blobs cho phiên bản đó.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN CONTENT-->
+			<div class="container">
+				<div class="content">
+					<h2>Vậy công cụ này làm được gì?</h2>
+					<p>Upgrade/Downgrade/Restore bất cứ iOS nào nếu như bạn có SHSH2 Blobs của nó</p>
+					<h2>LƯU Ý</h2>
+                    <p>Cần có SHSH2 blobs phù hợp cho phiên bản cần Downgrade/Upgrade.  <br> Công cụ này chỉ hổ trợ macOS và Windows <br> Công cụ này chỉ hoạt động trên các thiết bị 64bit (iPhone 5s trở lên) <br> Khi chạy công cụ này sẽ xóa toàn bộ dữ liệu của bạn. Nên nhớ hãy backup trên iTunes nếu như bạn muốn dữ liệu ko bị mất <br> Và tất nhiên iDevice của bạn bắt buộc phải JAILBREAK khi sử dụng công cụ này</p>
+					<a class="button" href="../Old-hieuvo.me/index.html">Hướng Dẫn</a>
+				</div>
+			</div>
+
+			<!-- NEXT CONTENT-->
+			<a id="footer1" href="#0" data-action="item2_content">
+				<footer>
+					<div class="container">
+						<p>Next Project</p>
+						<h3>StatiCrypt</h3>
+						<span class="bounce-right"></span>
+					</div>
+				</footer>
+			</a>
+		</div>
+	</div>
+
+	<div class="cd-item-content" id="item2_content">
+		<div>
+			<!-- HEADER-->
+			<div class="header-bg">
+				<div class="container">
+					<nav>
+						<a href="#0" class="close cd-img-replace">Close</a>
+					</nav>
+					<div class="project-info">
+						<h1>StatiCrypt</h1>
+						<p class="tags">
+							<span>Password protect a static HTML page</span>
+						</p>
+                        <br>
+						<p class="description"></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN CONTENT-->
+			<div class="container">
+				<div class="content">
+					<h2>StatiCrypt</h2>
+					<p>Based on the crypto-js library, StatiCrypt uses AES-256 to encrypt your string with your passphrase in your browser (client side).<br><br> Download your encrypted string in a HTML page with a password prompt you can upload anywhere (see example).</p>
+					<h2>HOW IT WORKS</h2>
+					<p>StatiCrypt generates a static, password protected page that can be decrypted in-browser: just send or upload the generated page to a place serving static content (github pages, for example) and you're done: the javascript will prompt users for password, decrypt the page and load your HTML. <br><br> It basically encrypts your page and puts everything with a user-friendly way to use a password in the new file. <br><br> AES-256 is state of the art but brute-force/dictionary attacks would be trivial to do at a really fast pace: use a long, unusual passphrase.</p>
+					<a class="button" href="https://hieuvo.me/staticrypt/" target="_blank">Visit</a>
+				</div>
+			</div>
+			
+			<!-- NEXT CONTENT-->
+			<a id="footer2" href="#0" data-action="item3_content">
+				<footer>
+					<div class="container">
+						<p>Next Project</p>
+						<h3>Apple Beta Software Program</h3>
+						<span class="bounce-right"></span>
+					</div>
+				</footer>
+			</a>
+		</div>
+    </div>
+
+ 	<div class="cd-item-content" id="item3_content">
+		<div>
+			<!-- HEADER-->
+			<div class="header-bg">
+				<div class="container">
+					<nav>
+						<a href="#0" class="close cd-img-replace">Close</a>
+					</nav>
+					<div class="project-info">
+						<h1>Apple Beta Software Program</h1>
+						<p class="tags">
+							<span>Beta</span>
+						</p>
+                        <br>
+						<p class="description">As a member of the Apple Beta Software Program, you can take part in shaping Apple software by test-driving pre-release versions and letting us know what you think.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN CONTENT-->
+			<div class="container">
+				<div class="content">
+					<h2>iOS</h2>
+					<p>iOS is the world’s most advanced mobile operating system. Now you can build even more intelligent apps using the power of machine learning with Core ML 2 and Create ML. You can create multiplayer augmented reality experiences and incorporate real world objects with ARKit. And you can use Siri Shortcuts, new camera APIs, and other exciting technologies to deliver more intelligent and immersive user experiences.</p>
+					<h2>macOS</h2>
+					<p>macOS Mojave was designed with advanced technologies to provide cutting-edge performance and robust security. Core ML 2 and the new Create ML framework let your apps deliver intelligent functionality faster and more easily than ever. Maximize the graphics and compute potential of your apps using advancements in Metal 2. Build richer web experiences in Safari. And with updates to Developer ID, you can give users even more confidence in the apps you distribute by having them notarized by Apple.</p>
+					<h2>watchOS</h2>
+					<p>Build your apps for watchOS to bring users timely information and give them an easy way to complete quick actions no matter where they are. And now with watchOS 5, you can deliver even better user experiences with interactive notifications, access to the Siri watch face, audio controls, and more.</p>
+					<h2>tvOS</h2>
+					<p>Your tvOS apps can deliver amazing experiences with stunning picture quality through 4K resolution, Dolby Vision, and HDR10 and immersive sound through Dolby Atmos. And with the Siri Remote, you have access to three-axis gyro data so you can create even more engaging gaming and interactive experiences.</p>
+					<a class="button" href="https://hieuvo.me" target="_blank">Download</a>
+				</div>
+			</div>
+			
+			<!-- NEXT CONTENT-->
+			<a id="footer3" href="#0" data-action="item4_content">
+				<footer>
+					<div class="container">
+						<p>Next Project</p>
+						<h3>HTML</h3>
+						<span class="bounce-right"></span>
+					</div>
+				</footer>
+			</a>
+		</div>
+    </div>
+	
+	<div class="cd-item-content" id="item4_content">
+		<div>
+			<!-- HEADER-->
+			<div class="header-bg">
+				<div class="container">
+					<nav>
+						<a href="#0" class="close cd-img-replace">Close</a>
+					</nav>
+					<div class="project-info">
+						<h1>HTML Builder</h1>
+						<p class="tags">
+							<span>Front-End Version</span>
+						</p>
+                        <br>
+						<p class="description">Drag and Drop HTML Builder.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN CONTENT-->
+			<div class="container">
+				<div class="content">
+					<h2>HTML Builder</h2>
+					<p>HTML Builder is a nifty little Javascript application which allows end-users to easily compose custom HTML designs using pre-defined HTML elements. The HTML Builder script comes with several sample HTML elements (the ones as displayed in the live demo), however the script really shines when used with your own custom HTML elements!</p>
+					<h2>HTML Builder features</h2>
+					<p>Build custom HTML pages using predefined HTML elements<br><br>Create your own custom HTML elements with ease<br><br>Integrates seamlessly with CSS frameworks (like Bootstrap, Foundation, etc)<br><br>Create multiple pages in one session<br><br>Edit CSS, links, images (uploading possible) and icons (integrates with Font Awesome)<br><br>Export the created pages (incl CSS, Javascript and images)<br><br>Basic editing of written content (only available for non IE browsers)<br></p>
+					<a class="button" href="https://hieuvo.me/HTML" target="_blank">Live Demo</a>
+				</div>
+			</div>
+			
+			<!-- NEXT CONTENT-->
+			<a id="footer4" href="#0" data-action="item5_content">
+				<footer>
+					<div class="container">
+						<p>Next Project</p>
+						<h3>Hieuvo's Repo</h3>
+						<span class="bounce-right"></span>
+					</div>
+				</footer>
+			</a>
+		</div>
+    </div>
+<script src="vendor/js/jquery-2.1.4.js"></script>
+<script src="vendor/js/jquery.mobile.custom.min.js"></script>
+<script src="vendor/js/main.js"></script>
+<script src="js/minjs/app.js"></script>
 </body>
 </html>

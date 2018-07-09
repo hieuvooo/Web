@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="19px" viewBox="0 0 38 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="case-studies" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="print-design" transform="translate(-455.000000, -3630.000000)" fill-rule="nonzero" fill="#F6F7FB">
+            <g id="footer" transform="translate(0.000000, 3523.000000)">
+                <path d="M474.720129,135.000052 L474.720129,100.828139 L481.395923,107.417357 C481.554678,107.5734 481.78147,107.652226 481.988823,107.652226 C482.196176,107.652226 482.413249,107.5734 482.572004,107.417357 C482.887893,107.103661 482.892753,106.593705 482.576864,106.280009 L474.733089,98.4874871 C474.609973,98.2011393 474.324862,98.0000523 473.991154,98.0000523 C473.728722,97.996835 473.50517,98.0676176 473.336696,98.2349219 L465.236969,106.2784 C464.92108,106.592096 464.92108,107.102052 465.236969,107.415748 C465.552859,107.729444 466.024263,107.729444 466.341772,107.415748 L473.100184,100.664052 L473.100184,135.000052 L474.720129,135.000052 Z" id="Shape" transform="translate(473.905708, 116.500000) rotate(-270.000000) translate(-473.905708, -116.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
