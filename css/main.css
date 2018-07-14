@@ -1,5 +1,5 @@
-@import url("SanFranciscoDisplay_Heavy/stylesheet.css");
-@import url("SanFranciscoDisplay_Light/stylesheet.css");
+@import url("SanFranciscoText_Light/stylesheet.css");
+@import url("SanFranciscoText_Semibold/stylesheet.css");
 body {
 	margin: 0;
 	padding: 0
@@ -1292,14 +1292,15 @@ body {
 body {
 	min-width: 320px;
 	background-color: #2C3135;
-	font-family: SanFranciscoDisplay Light;
+	font-family: SanFranciscoText Light;
 	color: #191D20;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
 h1, h2 {
 	padding: 0;
-	margin: 0
+	margin: 0;
+	font-family: SanFranciscoText Semibold;
 }
 .cd-intro-block {
 	background-color: #2C3135;
@@ -1416,7 +1417,7 @@ h1, h2 {
 	margin-left: -144px;
 	width: 288px;
 	height: 120px;
-	font-family: SanFranciscoDisplay Light;
+	font-family: SanFranciscoText Light;
 	font-weight: 800
 }
 .cd-intro-block .content .letter {
@@ -1553,9 +1554,9 @@ footer {
 	margin-top: 130px;
 	max-width: 700px
 }
-.cd-item-content .header-bg .project-info h1 {
+.cd-item-content .header-bg .project-info  {
 	font-size: 40px;
-	font-family: SanFranciscoDisplay Light;
+	font-family: SanFranciscoText Light;
 	font-weight: 800;
 	color: #FFF
 }
@@ -1831,7 +1832,7 @@ footer {
 }
 .cd-item-content .header-bg2 .project-info h1 {
 	font-size: 40px;
-	font-family: SanFranciscoDisplay Light;
+	font-family: SanFranciscoText Light;
 	font-weight: 800;
 	color: #FFF
 }
