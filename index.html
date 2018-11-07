@@ -1,412 +1,314 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hieuvo.me | Downgrade iOS khoá sign với Futurerestore</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<link href="https://raw.githubusercontent.com/hieuvooo/hieuvooo.github.io/master/favicon.ico" rel="shortcut icon">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-	<link rel="stylesheet" href="vendor/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="vendor/css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/main.css"> <!-- css file compiled of scss files -->
-	<script src="vendor/js/modernizr.js"></script> <!-- Modernizr -->
-
-	<title>Hieuvo | Front Page</title>
-</head>
-<body>
-	<!-- HEADER -->
-	<header class="cd-intro-block">
-		<div class="cd-content-wrapper container">
-			<nav>
-				<!--Logo-->
-				<a href="index.html">
-					<svg id="logo" viewBox="0 0 204 54">
-					    <defs></defs>
-					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="70" font-family="Lato-Light, Lato" font-weight="300">
-					    </g>
-					</svg>
-				</a>
-
-				<!--Dark/Light Mode toggle button-->
-				<div class="toggle-container">
-					<div class="toggle-switch">
-					  <input type="checkbox" id="toggle"/>
-					  <label for="toggle">
-							<div class="sun-icon">
-								<svg viewBox="0 0 12 12">
-										<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-												<g id="dark-mode" transform="translate(-1006.000000, -68.000000)" fill="#FFFFFF">
-														<g id="HEADER" transform="translate(0.000000, -1.000000)">
-																<g id="nav" transform="translate(108.000000, 60.000000)">
-																		<g id="mode-toggle" transform="translate(898.000000, 0.000000)">
-																				<g id="weather-sun" transform="translate(0.000000, 9.000000)">
-																						<path d="M6,1.56521739 C6.144,1.56521739 6.26086957,1.44834783 6.26086957,1.30434783 L6.26086957,0.260869565 C6.26086957,0.116869565 6.144,0 6,0 C5.856,0 5.73913043,0.116869565 5.73913043,0.260869565 L5.73913043,1.30434783 C5.73913043,1.44834783 5.856,1.56521739 6,1.56521739 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M6.26086957,11.7391304 L6.26086957,10.6956522 C6.26086957,10.5516522 6.144,10.4347826 6,10.4347826 C5.856,10.4347826 5.73913043,10.5516522 5.73913043,10.6956522 L5.73913043,11.7391304 C5.73913043,11.8831304 5.856,12 6,12 C6.144,12 6.26086957,11.8831304 6.26086957,11.7391304 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M10.6956522,6.26086957 L11.7391304,6.26086957 C11.8831304,6.26086957 12,6.144 12,6 C12,5.856 11.8831304,5.73913043 11.7391304,5.73913043 L10.6956522,5.73913043 C10.5516522,5.73913043 10.4347826,5.856 10.4347826,6 C10.4347826,6.144 10.5516522,6.26086957 10.6956522,6.26086957 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M0.260869565,6.26086957 L1.30434783,6.26086957 C1.44834783,6.26086957 1.56521739,6.144 1.56521739,6 C1.56521739,5.856 1.44834783,5.73913043 1.30434783,5.73913043 L0.260869565,5.73913043 C0.116869565,5.73913043 0,5.856 0,6 C0,6.144 0.116869565,6.26086957 0.260869565,6.26086957 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M9.32034783,2.94052174 C9.38713043,2.94052174 9.45391304,2.91495652 9.50504348,2.86434783 L10.2433043,2.12608696 C10.3450435,2.02434783 10.3450435,1.85895652 10.2433043,1.75721739 C10.1415652,1.65547826 9.97617391,1.65547826 9.87443478,1.75721739 L9.13565217,2.49547826 C9.03391304,2.59721739 9.03391304,2.7626087 9.13565217,2.86434783 C9.18678261,2.91495652 9.25356522,2.94052174 9.32034783,2.94052174 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M1.94191304,10.3189565 C2.00869565,10.3189565 2.07547826,10.2933913 2.1266087,10.2427826 L2.86486957,9.50452174 C2.9666087,9.40278261 2.9666087,9.2373913 2.86486957,9.13565217 C2.76313043,9.03391304 2.59773913,9.03391304 2.496,9.13565217 L1.75773913,9.87391304 C1.656,9.97565217 1.656,10.1410435 1.75773913,10.2427826 C1.80834783,10.2933913 1.87513043,10.3189565 1.94191304,10.3189565 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M9.50452174,9.13565217 C9.40278261,9.03391304 9.2373913,9.03391304 9.13565217,9.13565217 C9.03391304,9.2373913 9.03391304,9.40278261 9.13565217,9.50452174 L9.87391304,10.2427826 C9.92504348,10.293913 9.99182609,10.3189565 10.0586087,10.3189565 C10.1253913,10.3189565 10.1921739,10.2933913 10.2433043,10.2427826 C10.3450435,10.1410435 10.3450435,9.97565217 10.2433043,9.87391304 L9.50452174,9.13565217 Z" id="Shape" fill-rule="nonzero"></path>
-																						<path d="M2.49547826,2.86434783 C2.54608696,2.91495652 2.61286957,2.94052174 2.67965217,2.94052174 C2.74643478,2.94052174 2.81321739,2.91495652 2.86434783,2.86434783 C2.96608696,2.7626087 2.96608696,2.59721739 2.86434783,2.49547826 L2.12608696,1.75721739 C2.02434783,1.65547826 1.85895652,1.65547826 1.75721739,1.75721739 C1.65547826,1.85895652 1.65547826,2.02434783 1.75721739,2.12608696 L2.49547826,2.86434783 Z" id="Shape" fill-rule="nonzero"></path>
-																						<circle id="Oval-3" cx="6" cy="6" r="3"></circle>
-																				</g>
-																		</g>
-																</g>
-														</g>
-												</g>
-										</g>
-								</svg>
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Giới thiệu</a></li>
+							<li><a href="#one">Lưu Ý</a></li>
+							<li><a href="#two">Chuẩn bị</a></li>
+							<li><a href="#three">Tiến hành</a></li>
+							<li><a href="#four">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Downgrade iOS khoá sign với Futurerestore </h1>
+							<p>Futurerestore đã được phát hành bởi <a href="https://twitter.com/tihmstar" target="_blank">@tihmstar</a> giúp bạn có thể Futurerestore một phiên bản iOS đã khóa Sign nếu như bạn có <a href="https://en.wikipedia.org/wiki/SHSH_blob" target="_blank">Blobs</a> cho phiên bản đó.</p>
+							<ul>
+							    <li>Công cụ này khá phức tạp để sử dụng và chưa hoàn thành 100%, nhưng miễn là bạn làm mọi thứ chính xác, bạn có thể khôi phục thiết bị về phiên bản iOS đã khoá.
+								</li>
+							</ul>
+						</div>
+					</section>
+				<!-- One -->
+					<section id="one" class="wrapper style2 fullscreen spotlights">
+						<section>
+							<div class="content">
+								<div class="inner">
+									<h2>Lưu ý</h2>
+							        <h2>Update 01/11/18: Apple đã khóa sign tất cả phiên bản của iOS 11 và điều hiển nhiên là Sep và Baseband của iOS 12 đã không sử dụng được khi Futurerestore. Trong tin buồn có tin vui, <a href="https://goo.gl/HCmZw8" target="_blank">đó là Sep và Baseband của iOS 12 vẫn dùng được trên các thiết bị chạy chip A7 và A8</a>, tuy nhiên A9 - A12 thì không.<br><br>Nếu bạn dùng chip A7 hoặc A8 mà đang ở trên iOS 10 muốn lên 11 thì chỉ cần thay Sep và Baseband của iOS 12 mới nhất <a href="http://m.me/hieuvo.me" target="_blank">(nếu bạn không biết dùng Sep hay Baseband nào thì cứ việc inbox mình).</a> Nếu bạn dùng chip A9 trở lên mà đang ở 10 hoặc 11 thì nên ở đó chờ Jailbreak cho iOS 12.<br><br> Riêng chip A7 từ iOS 11 vẫn xuống được 10 hoặc từ iOS 10 vẫn lên được 11 (phải có JB).<br><br> <a href="http://m.me/hieuvo.me" target="_blank">Mọi thắc mắc vui lòng inbox mình.</a></h2>
+									<br>
+									<ul>
+								        <li><strong style="font-size: 28px">Bài viết không dàng cho những ai không có jailbreak hoặc SHSH (Tại thời điểm viết bài này chưa có jb cho iOS 11.4 trở lên).</strong></li>
+										<li>Công cụ này chỉ hổ trợ macOS và Windows (64bit), Linux không được hổ trợ tại thời điểm hiện tại.</li>
+								        <li>Công cụ này chỉ hoạt động trên các thiết bị 64bit (iPhone 5s trở lên).</li>
+								        <li>Khi chạy công cụ này sẽ xóa toàn bộ dữ liệu của bạn. Nên nhớ hãy backup trên iTunes nếu như bạn muốn dữ liệu không bị mất.</li>
+										<li>Cần phải có iTunes (vì PC cần driver của iTunes để giao tiếp với iPhone).</li>
+								        <li>Và tất nhiên điện thoại bạn phải Jailbreak.</li>
+										<li>Mình sẽ không chịu trách nhiệm nếu bạn không làm đúng theo hướng dẫn của mình.</li>
+  				                    </ul>
+									<h1 class="major"></h1>
+									<h2>Nếu bạn đang ở iOS... và muốn lên 11.3.1:</h2>
+									<ul>
+								        <li>iOS 8: Làm y hệt cách này (jailbreak + shsh).</li>
+								        <li>iOS 9 → 9.3.3: Làm y hệt cách này nhưng set nonce bằng <a href="http://bit.ly/2mvZXh3" target="_blank">nonceEnabler</a> (jailbreak + shsh).</li>
+										<li>iOS 10 → 10.2: Làm y hệt cách này (jailbreak + shsh).</li>
+										<li>iOS 10.3 → 10.3.3: Làm y hệt cách này nhưng set nonce bằng app (jailbreak + shsh).</li>
+										<li>iOS 11: Làm y hệt cách này nhưng set nonce bằng app (jailbreak + shsh).</li>
+  				                    </ul>
+									<h1 class="major"></h1>
+									<h2>Nếu bạn đang ở iOS... và muốn Upgrade lên iOS... hoặc Downgrade xuống iOS...:</h2>
+									<ul>
+								        <li>Chip A7 (iP5S, iPad Air, iPad Mini 2;3): Có thể xuống iOS 10 nhưng ko làm theo cách này <a href="http://m.me/hieuvo.me" target="_blank">(Inbox mình).</a></li>
+								        <li>Chip A8 → A11 (iP6 → iPX): Nếu bạn muốn restore lại hoặc đang ở 11.3.1 muốn xuống iOS 10 hoặc 9: Ko thể vì Baseband và Sep đã bị khoá trên những bản này.</li>
+  				                    </ul>
+									<h1 class="major"></h1>
+									<h2>Sep và Baseband là gì?</h2>
+									<ul>
+									    <li>Sep là phần quản lý và lưu trữ TouchID, hay còn gọi là Secure Enclave (SEP OS).</li>
+										<li>Baseband là phần quản lý sóng ăn ten của sim (ipad wifi không cần dùng baseband vì làm gì có sim).</li>
+									</ul>
+									<h1 class="major"></h1>
+									<h2>Vì sao chip A7 có thể xuống đc iOS 10 mà ko phải mấy chip khác?</h2>
+									<p>Vì chip A7 muốn lên iOS 11 bắt buộc phải lên iOS 10 (Ví dụ mình xài iP5S đang chạy iOS 9.3.3 và muốn lên iOS 11 bắc buộc mình phải update lên iOS 10 (vào cài đặt chung rồi update qua ota), nên đó là lý do vì sao Apple không khoá ota bản 10.3.3 (vẫn khoá bản restore qua iTunes) trên các thiết bị chạy chip A7. Và mọi người tận dụng lý do này để fake manifest iOS 10.3.3 để restore bất cứ phiên bản nào của iOS 10.</p>
+									
+									<br><br><p>Mình ưu tiên trải nghiệm nên bài viết không để quảng cáo hay coin miner nào hết. Copy thì nhớ credit mình là ok.</p>
+								</div>
 							</div>
-							<div class="moon-icon">
-								<svg viewBox="0 0 12 12">
-										<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-												<g id="dark-mode" transform="translate(-1089.000000, -69.000000)" fill="#FFFFFF">
-														<g id="HEADER" transform="translate(0.000000, -1.000000)">
-																<g id="nav" transform="translate(108.000000, 60.000000)">
-																		<g id="mode-toggle" transform="translate(898.000000, 0.000000)">
-																				<g id="weather-moon" transform="translate(83.000000, 10.000000)">
-																						<path d="M5.3575,0.000416666667 C5.28708333,-0.00416666667 5.2175,0.0266666667 5.175,0.0845833333 C5.1325,0.1425 5.1225,0.2175 5.14875,0.284166667 C5.32166667,0.72625 5.40916667,1.18625 5.40916667,1.65166667 C5.40916667,3.72333333 3.72375,5.40916667 1.65166667,5.40916667 C1.18625,5.40916667 0.72625,5.32166667 0.284166667,5.14875 C0.2175,5.1225 0.1425,5.1325 0.0845833333,5.175 C0.0270833333,5.2175 -0.00458333333,5.28625 0.000416666667,5.3575 C0.189583333,7.96083333 2.38166667,10 4.99125,10 C7.75291667,10 10,7.75291667 10,4.99125 C10,2.38166667 7.96083333,0.189583333 5.3575,0.000416666667 Z M4.99125,9.58333333 C2.70708333,9.58333333 0.77125,7.87875 0.450833333,5.64666667 C0.8425,5.76541667 1.24541667,5.82541667 1.65166667,5.82541667 C3.95333333,5.82541667 5.82583333,3.95291667 5.82583333,1.65125 C5.82583333,1.24458333 5.76583333,0.842083333 5.64708333,0.450416667 C7.87875,0.77125 9.58333333,2.70666667 9.58333333,4.99125 C9.58333333,7.52333333 7.52333333,9.58333333 4.99125,9.58333333 Z" id="Shape" fill-rule="nonzero"></path>
-																						<polygon id="Path-2" points="5.51574707 0.256164551 7.40356445 0.776855469 8.73706055 1.91943359 9.72241211 3.62353516 9.8125 5.43652344 9.19580078 7.44091797 8.39331055 8.53076172 7.37817383 9.18164062 5.88085938 9.69262695 4.36621094 9.75 3.41723633 9.48706055 2.33520508 8.97949219 1.57861328 8.34741211 0.950439453 7.31689453 0.486328125 6.37597656 0.2578125 5.41967773 1.76757813 5.62988281 3.00366211 5.52124023 4.37231445 4.59570313 5.10205078 3.66870117 5.65917969 2.27929687 5.65844727 0.871582031"></polygon>
-																				</g>
-																		</g>
-																</g>
-														</g>
-												</g>
-										</g>
-								</svg>
+						</section>
+					</section>
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fullscreen fade-up">
+						<div class="inner">
+							<h2>Tóm tắt</h2>
+							<p>Một cái nhìn khái quát về các trình tự về quá trình chuẩn bị ban đầu cho đến kết thúc.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-check"></span>
+									<h3>1. iPSW</h3>
+									<p>Tải iPSW mà bạn cần xuống và iPSW mới nhất.</p>
+								</section>
+								<section>
+									<span class="icon major fa-check"></span>
+									<h3>2. Extract files từ iPSW bản mới nhất</h3>
+									<p>Extract Sep, Baseband, BuildManifest.</p>
+								</section>
+								<section>
+									<span class="icon major fa-check"></span>
+									<h3>3. Set Nonce</h3>
+									<p>Set boot nonce của SHSH vào iPhone.</p>
+								</section>
+								<section>
+									<span class="icon major fa-check"></span>
+									<h3>4. Tiến hành</h3>
+									<p>Kiểm trả lại và bắt đầu quá trình Futurerestore.</p>
+								</section>
+							</div>						
+							<h1 class="major"></h1>						
+							<h2>1. Chuẩn bị</h2>
+							
+							<p>1.1 Tạo một Folder tên là <strong>Futurerestore</strong>. Đây là thư mục bạn để tất cả các files để dễ thuận tiện trong quá trình làm.</p>
+							
+							<p>1.2 Tải 2 bản iPSW một firmware đang sign mới nhất và một firmware bạn muốn <strong>Futurerestore.</strong></p>
+							<a href="http://bit.ly/2NKGTbs" class="button primary icon fa-download" target="_blank">iOS</a>
+							<br><br>
+							
+							<p>1.3 Bỏ cả 2 vào thư mục <strong>Futurerestore</strong>.</p>
+							
+							<p>1.4 Đổi đuôi firmware mới nhất từ <strong>".ipsw"</strong> thành <strong>".zip"</strong>.</p>
+							<span class="image fit"><img src="images/1.4.gif"/></span><br><!-- 60fps WOW Such frame much smooth -->
+							
+							<p>1.5 Mở zip và copy file <strong>BuildManifest.plist</strong> ra ngoài.</p>
+							<span class="image fit"><img src="images/1.5.gif"/></span><br>
+							
+							<p>1.6 Vào trang <a href="http://bit.ly/2JrD8UV" target="_blank"><strong>The iPhone Wiki</strong></a> kéo xuống tới phần iPhone của bạn và tìm số baseband của bản mới nhất. <br>→ Ví dụ firmware 11.4.1 mới nhất của iP5S có baseband là <strong>8.55.00</strong></p>
+							<span class="image fit"><img src="images/1.6.PNG"/></span><br>
+							
+							<p>1.7 Vào <strong>Firmware</strong> chọn theo phiên bản baseband của bạn có đuôi là <strong>".bbfw"</strong> và copy ra ngoài. <br>→ Ví dụ 11.4.1 có baseband là <strong>8.55.00</strong> thì mình sẽ chọn <strong>Mav7Mav8-8.55.00.Release.bbfw</strong></p>
+							<span class="image fit"><img src="images/1.7.gif"/></span><br>
+							
+							<p>1.8 Tải <a href="https://apple.co/2mnsRA3"><strong>Battery Memory System Status Monitor</strong></a></p>
+							<span class="image fit"><img src="images/1.8.JPG"/></span><br>
+							
+							<p>1.9 Mở ứng dụng và chọn phần <strong>System</strong> ngay trên cùng, bạn sẽ thấy <strong>Device Model</strong> của bạn.</p>
+							<span class="image fit"><img src="images/1.9.JPG"/></span><br>
+							
+							<p>1.10 Vào tiếp <strong>all_flash</strong>, kéo xuống dưới cùng bạn sẽ thấy một loạt file có tên là <strong>sep-firmware</strong>, copy file sep có đuôi <strong>".imp4"</strong> trùng với Device model của bạn ở <strong>bước 1.9</strong>.</p>
+							<span class="image fit"><img src="images/1.10.gif"/></span><br>
+							
+							<p>1.11 Tải <strong>shsh</strong> của phiên bản bạn muốn Futurerestore (Nếu bạn dùng tsschecker để lưu shsh thì vào <strong>tsssaver</strong> để check xem shsh của bạn có valid hay không.</p>
+							<a href="https://tsssaver.1conan.com/check.php" class="button primary" target="_blank">Kiểm tra SHSH</a><br><br>
+							<span class="image fit"><img src="images/1.11.gif"/></span><br>
+							
+							<p>1.12 Tải <strong>Futurerestore fork</strong> của <strong>encounter</strong> (Nếu bạn tải bản chính chủ của tihmstar thì nên xoá đi vì nó không hoạt trên iOS 11).</p>
+							<a href="http://bit.ly/2zzgGJY" class="button primary icon fa-download" target="_blank">Futurerestore</a><br><br>
+							<span class="image fit"><img src="images/1.12.PNG"/></span><br>
+							
+							<p>1.13 Copy <strong>shsh</strong> và extract <strong>Futurerestore fork</strong> đã tải vào <strong>Futurerestore</strong>.</p>
+							<span class="image fit"><img src="images/1.13.PNG"/></span><br>
+							
+							<p>1.14 Xoá file zip và đổi tên file để dễ phân biệt.</p>
+							<span class="image fit"><img src="images/1.14.gif"/></span><br>
+							
+							<h2>2. Set nonce</h2>
+							
+							<p>2.1 Mở file shsh của bạn dưới notepad, <strong>ctrl + f</strong> rồi gõ <strong>"gene"</strong>, tìm đến "<strong>&lt;string&gt;0x......&lt;/string&gt;</strong>".<br>→ Ví dụ shsh 11.3.1 của mình có nonce là <strong>0xf44116d95df08a43</strong></p>
+							<span class="image fit"><img src="images/2.1.gif"/></span><br>
+							
+							<h3><strong>2.2 Set nonce</strong></h3>
+							<ul>
+							    <li><strong>iOS 10 → 10.2.1:</strong> Mở MTerminal hoặc NewTerm gõ</li><br>
+								<pre><code>Hieus-iphone:~ mobile$ su <br>password: alpine <br>Hieus-iphone:/var/mobile root# nvram com.apple.System.boot-nonce=0x.....'  </code></pre>
+								<p>
+				                Ví dụ shsh của mình có generator là <strong>0x66fd9ae6a407ddfa</strong> thì sẽ ghi là <strong>nvram com.apple.System.boot-nonce=0x66fd9ae6a407ddfa</strong>
+				                </p>
+								<span class="image fit"><img src="images/2.2.JPG"/></span>
+								<p>
+				                Gõ <strong>nvram -p</strong> để check lại.
+				                </p>
+								<span class="image fit"><img src="images/2.2.1.JPG"/></span>
+							</ul>											
+						</div>
+					</section>
+					
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a class="image"><img src="images/2.2.2.jpg" data-position="center center"/></a>
+							<div class="content">
+								<div class="inner">
+									<h2>iOS 10.3 → 10.3.3</h2>
+									<p>Cài v0rtexNonce qua Cydia Impactor hoặc Ext3nder Installer rồi mở app ghi đoạn generator của bạn vào.</p>
+									<ul class="actions">
+										<li><a href="https://github.com/arx8x/v0rtexNonce/releases" class="button primary icon fa-download" target="_blank">v0rtexNonce</a></li>
+									</ul>
+								</div>
 							</div>
-					  </label>
-					</div>
-				</div>
-				<div class="nav-links">
-					<a href="#0" data-action="aboutme_content" class="cd-btn">Contact</a>
-				</div>
-			</nav>
-			<div  class="content">
-				<h1>Hieuvo's<br>Website.</h1>
-                <div class="letter">H</div>
-			</div>
-			<a class="arrow-bottom cd-btn bounce" data-action="show-items"></a>
-		</div>
-	</header>
+						</section>
+						<section>
+							<a class="image"><img src="images/2.2.3.jpg" data-position="center center"/></a>
+							<div class="content">
+								<div class="inner">
+									<h2>iOS 11 → 11.1.2</h2>
+									<p>Cài NonceSet112 qua Cydia Impactor hoặc Ext3nder Installer rồi làm tương tự như 10.3 → 10.3.3</p>
+									<ul class="actions">
+										<li><a href="https://github.com/julioverne/NonceSet112" class="button primary icon fa-download" target="_blank">NonceSet112</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="images/2.2.4.PNG" data-position="center center"/></a>
+							<div class="content">
+								<div class="inner">
+									<h2>iOS 11.2 → 11.3.1/11.4b3</h2>
+									<p>Cài noncereboot1131 hoặc electra1131 qua Cydia Impactor hoặc Ext3nder Installer rồi làm tương tự như bước trên.</p>
+									<ul class="actions">
+										<li><a href="http://pwn20wnd.science/noncereboot1131UI/noncereboot1131UI.ipa" class="button primary icon fa-download" target="_blank">noncereboot1131</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+				<!-- Three -->
+					<section id="three" class="wrapper style4 fade-up">
+						<div class="inner">
+							<h2>3. Tiến hành</h2>
+							
+							<p>3.1 Shift + chuột phải chọn Open PowerShell window here (hoặc cmd) rồi gõ <code>.\futurerestore.exe</code> để kiểm tra futurerestore có báo lỗi gì không.</p>
+							<span class="image fit"><img src="images/3.1.gif"/></span><br>
+							
+							<p>3.2 Cắm điện thoại vào máy tính, tiếp tục trên PowerShell gõ <code>.\futurerestore.exe -w -t &lt;shsh của bạn&gt;</code></p>
+							<p>Nếu <strong>"waiting for nonce"</strong> trùng với <strong>"Got ApNonce from device"</strong> thì bạn đã set nonce thành công, còn nếu dòng <strong>"Got ApNonce from device"</strong> lặp lại liên tục thì bạn đã set sai generator.</p>
+							<span class="image fit"><img src="images/3.2.gif"/></span><br>
+							
+							<p>★ Đây là bước cuối cùng kiểm tra kỹ đã đủ file chưa, không dùng dây cáp lõng hoặc không có mfi (vì cáp không có chứng chỉ mfi không giao tiếp đc iPhone ở recovery mode), nếu xãy ra lỗi thì đừng vội restore trên itunes, tải <a href="https://www.tenorshare.com/products/reiboot.html" target="_blank">ReiBoot</a> và exit recovery mode rồi bắt đầu lại.</p>
+							
+							<p>3.3 Cắm điện thoại vào máy tính, trên PowerShell gõ</p>
+							<pre><code>.\futurerestore.exe -t &lt;iOS SHSH2 blob&gt; -b &lt;Baseband file&gt; -p BuildManifest.plist -s &lt;SEP file&gt; -m BuildManifest.plist &lt;iOS IPSW File&gt;</code></pre>
+							<p>Trong đó dấu "&lt;&gt;" là tên file của bạn. Ví dụ của mình là:</p>
+							<pre><code>.\futurerestore.exe -t blob.shsh2 -b baseband.bbfw -p BuildManifest.plist -s sep.im4p -m BuildManifest.plist 11.3.1.ipsw</code></pre>
+							<p>★ Tip: khi gõ lệnh chỉ cần nhấn nút tab thì nó sẽ tự động ghi toàn bộ tên file.</p>
+							
+							<p>Sau khi gõ xong lệnh thì kiểm tra lại xem thiếu gì không (nhất là file baseband vs sep), nếu không thì nhấn enter rồi chờ cho đến khi xong (Trong quá trình futurerestore đừng đụng vào điện thoại hoặc dây cáp, nếu bị lỏng có thể gây mất kết nối trong quá trình Futurerestore và buộc phải lên bản mới nhất qua iTunes).</p> 
+							<p>Nếu Futurerestore báo lỗi "failed with errorcode=-44" thì inbox mình nhé, đây là lỗi do img4tool trong futurerestore không đọc được shsh (vì từ iOS 11.3 trở lên apple gọp các thiết bị lại chung thành một bản iPSW).</p>
+							<p>Nếu báo lỗi gì thì contact mình qua messenger hoặc mail, link mình để phía dưới.</p>
+							
+							
+							<div class="video-container"><iframe src="https://www.youtube.com/embed/5tGPyR2NDWA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+							<br><p style="text-align:center">Sorry ae clip trên mình làm từ hồi iOS 10, nhưng cách làm đấy vẫn giống y hệt cách làm trong bài hướng dẫn này chỉ khác cách set nonce từ iOS 10.3 trở lên là phải set nonce bằng app (đơn giản hơn cách 10.2)</p>
+						</div>
+					</section>
 
-	<!-- CONTENT -->
-	<div class="cd-items-wrapper">
-		<!--<a href="#0" class="cd-btn close-btn" data-action="close-items"></a>-->
-
-		<!-- SLIDER -->
-		<ul class="cd-slider" style="width: 3823px; transform: translateX(0px);">
-			<li class="slides-in current">
-				<a data-action="item1_content" href="#0"><img alt="item image" src="resources/img/iOS.png">
-				<div class="item-info">
-					<h2>
-						Futurerestore
-					</h2>
-					<p>
-						<span>Downgrade/Upgrade iOS Unsigned</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item2_content" href="#0"><img alt="item image" src="resources/img/encrypt.png">
-				<div class="item-info">
-					<h2>
-						Staticrypt
-					</h2>
-					<p>
-						<span>Encrypt HTML</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in" style="opacity: 1;">
-				<a data-action="item3_content" href="#0"><img alt="item image" src="resources/img/beta.png">
-				<div class="item-info">
-					<h2>
-						Apple Beta Program
-					</h2>
-					<p>
-						<span>iOS, macOS, watchOS, and tvOS</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in nav_hover" style="opacity: 0.4;">
-				<a data-action="item4_content" href="#0"><img alt="item image" src="resources/img/html.png">
-				<div class="item-info">
-					<h2>
-						HTML
-					</h2>
-					<p>
-						<span>Online HTML Builder</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item5_content" href="#0"><img alt="item image" src="resources/img/repo.png">
-				<div class="item-info">
-					<h2>
-						Hieuvo's Repo
-					</h2>
-					<p>
-						<span>Cydia Repository</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item6_content" href="#0"><img alt="item image" src="resources/img/cloud.png">
-				<div class="item-info">
-					<h2>
-						Hieuvo's File
-					</h2>
-					<p>
-						<span>Online Files Manager</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item7_content" href="#0"><img alt="item image" src="resources/img/Purple-Lake.png">
-				<div class="item-info">
-					<h2>
-						Theme
-					</h2>
-					<p>
-						<span>J2team Facebook Theme</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item8_content" href="#0"><img alt="item image" src="resources/img/empty.png">
-				<div class="item-info">
-					<h2>
-						Empty
-					</h2>
-					<p>
-						<span>A Beautiful Empty Website</span>
-					</p>
-				</div></a>
-			</li>
-			<li class="slides-in">
-				<a data-action="item9_content" href="#0"><img alt="item image" src="resources/img/translate.png">
-				<div class="item-info">
-					<h2>
-						Translate
-					</h2>
-					<p>
-						<span>Bộ cuyển dổi Tiếq Việt</span>
-					</p>
-				</div></a>
-			</li>
-		</ul>	
-
-		<!-- SLIDER ARROWS -->
-		<ul class="cd-slider-navigation cd-img-replace">
-			<li><a href="#0" class="prev inactive">Prev</a></li>
-			<li><a href="#0" class="next inactive">Next</a></li>
-		</ul> <!-- .cd-slider-navigation -->
-
-	</div> <!-- .cd-projects-wrapper -->
-	
-    <!-- CONTACT -->
-	<div class="cd-item-content" id="aboutme_content">
-		<div>
-			<!-- HEADER-->
-			<div class="header-bg">
-				<div class="container">
-					<nav>
-						<a href="#0" class="close cd-img-replace">Close</a>
-					</nav>
-					<div class="project-info">
-						<h1>Hieuvo</h1>
-
-					</div>
-				</div>
 			</div>
 
-			<!-- MAIN CONTENT-->
-			<div class="container">
-				<div class="content">
-					<h2>Contact me via</h2><br>
-					<a class="button" href="mailto:me@hieuvo.me" target="_blank">Business Mail</a>
-					<a class="button" href="mailto:support@hieuvo.me" target="_blank">Personal Mail</a>
-					<a class="button" href="http://m.me/hieuvo.me" target="_blank">Facebook</a>
-					<a class="button" href="https://www.youtube.com/channel/UCKVb9nyxT-u1SxVe9KJnEKA" target="_blank">Youtube</a>
-				</div>
-			</div>
-		</div>
-	</div>
+		<!-- Footer -->
+			<footer id="footer">
+				<section id="four" class="wrapper style1-alt fullscreen fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>I could make an english vers if u want, just hit me up xD
+							<div class="split style1">
+								<section>
+									<form method="post" action="https://formspree.io/support@hieuvo.me">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+										    <h3>Mail</h3>
+											<a href="mailto:hieuvo@hieuvo.me">hieuvo@hieuvo.me</a>
+										</li>									
+										<li>
+											<h3>Support</h3>
+											<a href="mailto:support@hieuvo.me">Support@hieuvo.me</a>
+										</li>	
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="https://twitter.com/KimJongUnnnnnnn" class="fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+												<li><a href="http://m.me/hieuvo.me" class="fa-facebook-square" target="_blank"><span class="label">Facebook</span></a></li>
+												<li><a href="https://www.instagram.com/hieuvo.me/" class="fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+												<li><a href="https://www.youtube.com/channel/UCKVb9nyxT-u1SxVe9KJnEKA" class="fa-youtube-play" target="_blank"><span class="label">Youtube</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+			</footer>
 
-	<!-- DETAIL PAGES -->
-	<div class="cd-item-content" id="item1_content">
-		<div>
-			<!-- HEADER-->
-			<div class="header-bg">
-				<div class="container">
-					<nav><a href="#0" class="close cd-img-replace">Close</a></nav>
-					<div class="project-info">
-						<h1>Futurerestore</h1>
-						<p class="tags"><span>iOS</span></p>
-						<p class="description">Upgrade một phiên bản iOS thì không hề khó đối với hầu hết người dùng, Downgrade một phiên bản iOS thì chuyện này sẽ ko thể xảy ra một khi Apple đã khóa Sign. Tuy nhiên một công cụ có tên Futurerestore (Prometheus) đã được phát hành bởi <a href="https://twitter.com/tihmstar" target="_blank">@tihmstar</a>, nó giúp bạn có thể Downgrade/Upgrade một phiên bản iOS đã khóa Sign nếu như bạn có SHSH2 Blobs cho phiên bản đó.</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- MAIN CONTENT-->
-			<div class="container">
-				<div class="content">
-					<h2>Vậy công cụ này làm được gì?</h2>
-					<p>Upgrade/Downgrade/Restore bất cứ iOS nào nếu như bạn có SHSH2 Blobs của nó</p>
-					<h2>LƯU Ý</h2>
-                    <p>Cần có SHSH2 blobs phù hợp cho phiên bản cần Downgrade/Upgrade.  <br> Công cụ này chỉ hổ trợ macOS và Windows <br> Công cụ này chỉ hoạt động trên các thiết bị 64bit (iPhone 5s trở lên) <br> Khi chạy công cụ này sẽ xóa toàn bộ dữ liệu của bạn. Nên nhớ hãy backup trên iTunes nếu như bạn muốn dữ liệu ko bị mất <br> Và tất nhiên iDevice của bạn bắt buộc phải JAILBREAK khi sử dụng công cụ này</p>
-					<a class="button" href="https://hieuvo.me/Futurerestore" target="_blank">Hướng Dẫn</a>
-				</div>
-			</div>
-
-			<!-- NEXT CONTENT-->
-			<a id="footer1" href="#0" data-action="item2_content">
-				<footer>
-					<div class="container">
-						<p>Next Project</p>
-						<h3>StatiCrypt</h3>
-						<span class="bounce-right"></span>
-					</div>
-				</footer>
-			</a>
-		</div>
-	</div>
-
-	<div class="cd-item-content" id="item2_content">
-		<div>
-			<!-- HEADER-->
-			<div class="header-bg">
-				<div class="container">
-					<nav>
-						<a href="#0" class="close cd-img-replace">Close</a>
-					</nav>
-					<div class="project-info">
-						<h1>StatiCrypt</h1>
-						<p class="tags">
-							<span>Password protect a static HTML page</span>
-						</p>
-                        <br>
-						<p class="description"></p>
-					</div>
-				</div>
-			</div>
-
-			<!-- MAIN CONTENT-->
-			<div class="container">
-				<div class="content">
-					<h2>StatiCrypt</h2>
-					<p>Based on the crypto-js library, StatiCrypt uses AES-256 to encrypt your string with your passphrase in your browser (client side).<br><br> Download your encrypted string in a HTML page with a password prompt you can upload anywhere (see example).</p>
-					<h2>HOW IT WORKS</h2>
-					<p>StatiCrypt generates a static, password protected page that can be decrypted in-browser: just send or upload the generated page to a place serving static content (github pages, for example) and you're done: the javascript will prompt users for password, decrypt the page and load your HTML. <br><br> It basically encrypts your page and puts everything with a user-friendly way to use a password in the new file. <br><br> AES-256 is state of the art but brute-force/dictionary attacks would be trivial to do at a really fast pace: use a long, unusual passphrase.</p>
-					<a class="button" href="https://hieuvo.me/staticrypt/" target="_blank">Visit</a>
-				</div>
-			</div>
-			
-			<!-- NEXT CONTENT-->
-			<a id="footer2" href="#0" data-action="item3_content">
-				<footer>
-					<div class="container">
-						<p>Next Project</p>
-						<h3>Apple Beta Software Program</h3>
-						<span class="bounce-right"></span>
-					</div>
-				</footer>
-			</a>
-		</div>
-    </div>
-
- 	<div class="cd-item-content" id="item3_content">
-		<div>
-			<!-- HEADER-->
-			<div class="header-bg">
-				<div class="container">
-					<nav>
-						<a href="#0" class="close cd-img-replace">Close</a>
-					</nav>
-					<div class="project-info">
-						<h1>Apple Beta Software Program</h1>
-						<p class="tags">
-							<span>Beta</span>
-						</p>
-                        <br>
-						<p class="description">As a member of the Apple Beta Software Program, you can take part in shaping Apple software by test-driving pre-release versions and letting us know what you think.</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- MAIN CONTENT-->
-			<div class="container">
-				<div class="content">
-					<h2>iOS</h2>
-					<p>iOS 12 is designed to make your iPhone and iPad experience even faster, more responsive, and more delightful. Here are some exciting new features and improvements coming to the world’s most advanced mobile operating system.</p>
-					<h2>macOS</h2>
-					<p>Using a Mac has always inspired great work. Now macOS Mojave brings new features inspired by its most powerful users, but designed for everyone. Stay better focused on your work in Dark Mode. Automatically organize files using Stacks. Take more kinds of screenshots with less effort.</p>
-					<h2>watchOS</h2>
-					<p>With watchOS 5, you can do even more with your Apple Watch from your morning workout to lights out. Activity competitions with your friends. Brand-new workouts. Innovations to help you take your running further.</p>
-					<h2>tvOS</h2>
-					<p>Your tvOS apps can deliver amazing experiences with stunning picture quality through 4K resolution, Dolby Vision, and HDR10 and immersive sound through Dolby Atmos.</p><br>
-					<a class="button" href="https://hieuvo.me/iOS" target="_blank">Download Now</a>
-				</div>
-			</div>
-			
-			<!-- NEXT CONTENT-->
-			<a id="footer3" href="#0" data-action="item4_content">
-				<footer>
-					<div class="container">
-						<p>Next Project</p>
-						<h3>HTML</h3>
-						<span class="bounce-right"></span>
-					</div>
-				</footer>
-			</a>
-		</div>
-    </div>
-	
-	<div class="cd-item-content" id="item4_content">
-		<div>
-			<!-- HEADER-->
-			<div class="header-bg">
-				<div class="container">
-					<nav>
-						<a href="#0" class="close cd-img-replace">Close</a>
-					</nav>
-					<div class="project-info">
-						<h1>HTML Builder</h1>
-						<p class="tags">
-							<span>Front-End Version</span>
-						</p>
-                        <br>
-						<p class="description">Drag and Drop HTML Builder.</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- MAIN CONTENT-->
-			<div class="container">
-				<div class="content">
-					<h2>HTML Builder</h2>
-					<p>HTML Builder is a nifty little Javascript application which allows end-users to easily compose custom HTML designs using pre-defined HTML elements. The HTML Builder script comes with several sample HTML elements (the ones as displayed in the live demo), however the script really shines when used with your own custom HTML elements!</p>
-					<h2>HTML Builder features</h2>
-					<p>Build custom HTML pages using predefined HTML elements<br><br>Create your own custom HTML elements with ease<br><br>Integrates seamlessly with CSS frameworks (like Bootstrap, Foundation, etc)<br><br>Create multiple pages in one session<br><br>Edit CSS, links, images (uploading possible) and icons (integrates with Font Awesome)<br><br>Export the created pages (incl CSS, Javascript and images)<br><br>Basic editing of written content (only available for non IE browsers)<br></p>
-					<a class="button" href="https://hieuvo.me/HTML" target="_blank">Live Demo</a>
-				</div>
-			</div>
-			
-			<!-- NEXT CONTENT-->
-			<a id="footer4" href="#0" data-action="item5_content">
-				<footer>
-					<div class="container">
-						<p>Next Project</p>
-						<h3>Hieuvo's Repo</h3>
-						<span class="bounce-right"></span>
-					</div>
-				</footer>
-			</a>
-		</div>
-    </div>
-<script src="vendor/js/jquery-2.1.4.js"></script>
-<script src="vendor/js/jquery.mobile.custom.min.js"></script>
-<script src="vendor/js/main.js"></script>
-<script src="js/minjs/app.js"></script>
-</body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
