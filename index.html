@@ -1,314 +1,109 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Hieuvo.me | Downgrade iOS khoá sign với Futurerestore</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css"/>
-		<link href="https://raw.githubusercontent.com/hieuvooo/hieuvooo.github.io/master/favicon.ico" rel="shortcut icon">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><!-- Page Info -->
+	<link href="https://raw.githubusercontent.com/hieuvooo/hieuvooo.github.io/master/favicon.ico" rel="shortcut icon">
+	<title>Hieuvo | Front Page</title>
+	<meta content="Simples is a super simple blogging theme for Jekyll." name="description"><!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600" rel="stylesheet"><!-- Styles -->
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Giới thiệu</a></li>
-							<li><a href="#one">Lưu Ý</a></li>
-							<li><a href="#two">Chuẩn bị</a></li>
-							<li><a href="#three">Tiến hành</a></li>
-							<li><a href="#four">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Downgrade iOS khoá sign với Futurerestore </h1>
-							<p>Futurerestore đã được phát hành bởi <a href="https://twitter.com/tihmstar" target="_blank">@tihmstar</a> giúp bạn có thể Futurerestore một phiên bản iOS đã khóa Sign nếu như bạn có <a href="https://en.wikipedia.org/wiki/SHSH_blob" target="_blank">Blobs</a> cho phiên bản đó.</p>
-							<ul>
-							    <li>Công cụ này khá phức tạp để sử dụng và chưa hoàn thành 100%, nhưng miễn là bạn làm mọi thứ chính xác, bạn có thể khôi phục thiết bị về phiên bản iOS đã khoá.
-								</li>
-							</ul>
-						</div>
-					</section>
-				<!-- One -->
-					<section id="one" class="wrapper style2 fullscreen spotlights">
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>Lưu ý</h2>
-							        <h2>Update 01/11/18: Apple đã khóa sign tất cả phiên bản của iOS 11 và điều hiển nhiên là Sep và Baseband của iOS 12 đã không sử dụng được khi Futurerestore. Trong tin buồn có tin vui, <a href="https://goo.gl/HCmZw8" target="_blank">đó là Sep và Baseband của iOS 12 vẫn dùng được trên các thiết bị chạy chip A7 và A8</a>, tuy nhiên A9 - A12 thì không.<br><br>Nếu bạn dùng chip A7 hoặc A8 mà đang ở trên iOS 10 muốn lên 11 thì chỉ cần thay Sep và Baseband của iOS 12 mới nhất <a href="https://m.me/hieuvolol" target="_blank">(nếu bạn không biết dùng Sep hay Baseband nào thì cứ việc inbox mình).</a> Nếu bạn dùng chip A9 trở lên mà đang ở 10 hoặc 11 thì nên ở đó chờ Jailbreak cho iOS 12.<br><br> Riêng chip A7 từ iOS 11 vẫn xuống được 10 hoặc từ iOS 10 vẫn lên được 11 (phải có JB).<br><br> <a href="https://m.me/hieuvolol" target="_blank">Mọi thắc mắc vui lòng inbox mình.</a></h2>
-									<br>
-									<ul>
-								        <li><strong style="font-size: 28px">Bài viết không dàng cho những ai không có jailbreak hoặc SHSH (Tại thời điểm viết bài này chưa có jb cho iOS 11.4 trở lên).</strong></li>
-										<li>Công cụ này chỉ hổ trợ macOS và Windows (64bit), Linux không được hổ trợ tại thời điểm hiện tại.</li>
-								        <li>Công cụ này chỉ hoạt động trên các thiết bị 64bit (iPhone 5s trở lên).</li>
-								        <li>Khi chạy công cụ này sẽ xóa toàn bộ dữ liệu của bạn. Nên nhớ hãy backup trên iTunes nếu như bạn muốn dữ liệu không bị mất.</li>
-										<li>Cần phải có iTunes (vì PC cần driver của iTunes để giao tiếp với iPhone).</li>
-								        <li>Và tất nhiên điện thoại bạn phải Jailbreak.</li>
-										<li>Mình sẽ không chịu trách nhiệm nếu bạn không làm đúng theo hướng dẫn của mình.</li>
-  				                    </ul>
-									<h1 class="major"></h1>
-									<h2>Nếu bạn đang ở iOS... và muốn lên 11.3.1:</h2>
-									<ul>
-								        <li>iOS 8: Làm y hệt cách này (jailbreak + shsh).</li>
-								        <li>iOS 9 → 9.3.3: Làm y hệt cách này nhưng set nonce bằng <a href="http://bit.ly/2mvZXh3" target="_blank">nonceEnabler</a> (jailbreak + shsh).</li>
-										<li>iOS 10 → 10.2: Làm y hệt cách này (jailbreak + shsh).</li>
-										<li>iOS 10.3 → 10.3.3: Làm y hệt cách này nhưng set nonce bằng app (jailbreak + shsh).</li>
-										<li>iOS 11: Làm y hệt cách này nhưng set nonce bằng app (jailbreak + shsh).</li>
-  				                    </ul>
-									<h1 class="major"></h1>
-									<h2>Nếu bạn đang ở iOS... và muốn Upgrade lên iOS... hoặc Downgrade xuống iOS...:</h2>
-									<ul>
-								        <li>Chip A7 (iP5S, iPad Air, iPad Mini 2;3): Có thể xuống iOS 10 nhưng ko làm theo cách này <a href="https://m.me/hieuvolol" target="_blank">(Inbox mình).</a></li>
-								        <li>Chip A8 → A11 (iP6 → iPX): Nếu bạn muốn restore lại hoặc đang ở 11.3.1 muốn xuống iOS 10 hoặc 9: Ko thể vì Baseband và Sep đã bị khoá trên những bản này.</li>
-  				                    </ul>
-									<h1 class="major"></h1>
-									<h2>Sep và Baseband là gì?</h2>
-									<ul>
-									    <li>Sep là phần quản lý và lưu trữ TouchID, hay còn gọi là Secure Enclave (SEP OS).</li>
-										<li>Baseband là phần quản lý sóng ăn ten của sim (ipad wifi không cần dùng baseband vì làm gì có sim).</li>
-									</ul>
-									<h1 class="major"></h1>
-									<h2>Vì sao chip A7 có thể xuống đc iOS 10 mà ko phải mấy chip khác?</h2>
-									<p>Vì chip A7 muốn lên iOS 11 bắt buộc phải lên iOS 10 (Ví dụ mình xài iP5S đang chạy iOS 9.3.3 và muốn lên iOS 11 bắc buộc mình phải update lên iOS 10 (vào cài đặt chung rồi update qua ota), nên đó là lý do vì sao Apple không khoá ota bản 10.3.3 (vẫn khoá bản restore qua iTunes) trên các thiết bị chạy chip A7. Và mọi người tận dụng lý do này để fake manifest iOS 10.3.3 để restore bất cứ phiên bản nào của iOS 10.</p>
-									
-									<br><br><p>Mình ưu tiên trải nghiệm nên bài viết không để quảng cáo hay coin miner nào hết. Copy thì nhớ credit mình là ok.</p>
-								</div>
-							</div>
-						</section>
-					</section>
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fullscreen fade-up">
-						<div class="inner">
-							<h2>Tóm tắt</h2>
-							<p>Một cái nhìn khái quát về các trình tự về quá trình chuẩn bị ban đầu cho đến kết thúc.</p>
-							<div class="features">
-								<section>
-									<span class="icon major fa-check"></span>
-									<h3>1. iPSW</h3>
-									<p>Tải iPSW mà bạn cần xuống và iPSW mới nhất.</p>
-								</section>
-								<section>
-									<span class="icon major fa-check"></span>
-									<h3>2. Extract files từ iPSW bản mới nhất</h3>
-									<p>Extract Sep, Baseband, BuildManifest.</p>
-								</section>
-								<section>
-									<span class="icon major fa-check"></span>
-									<h3>3. Set Nonce</h3>
-									<p>Set boot nonce của SHSH vào iPhone.</p>
-								</section>
-								<section>
-									<span class="icon major fa-check"></span>
-									<h3>4. Tiến hành</h3>
-									<p>Kiểm trả lại và bắt đầu quá trình Futurerestore.</p>
-								</section>
-							</div>						
-							<h1 class="major"></h1>						
-							<h2>1. Chuẩn bị</h2>
-							
-							<p>1.1 Tạo một Folder tên là <strong>Futurerestore</strong>. Đây là thư mục bạn để tất cả các files để dễ thuận tiện trong quá trình làm.</p>
-							
-							<p>1.2 Tải 2 bản iPSW một firmware đang sign mới nhất và một firmware bạn muốn <strong>Futurerestore.</strong></p>
-							<a href="http://bit.ly/2NKGTbs" class="button primary icon fa-download" target="_blank">iOS</a>
-							<br><br>
-							
-							<p>1.3 Bỏ cả 2 vào thư mục <strong>Futurerestore</strong>.</p>
-							
-							<p>1.4 Đổi đuôi firmware mới nhất từ <strong>".ipsw"</strong> thành <strong>".zip"</strong>.</p>
-							<span class="image fit"><img src="images/1.4.gif"/></span><br><!-- 60fps WOW Such frame much smooth -->
-							
-							<p>1.5 Mở zip và copy file <strong>BuildManifest.plist</strong> ra ngoài.</p>
-							<span class="image fit"><img src="images/1.5.gif"/></span><br>
-							
-							<p>1.6 Vào trang <a href="http://bit.ly/2JrD8UV" target="_blank"><strong>The iPhone Wiki</strong></a> kéo xuống tới phần iPhone của bạn và tìm số baseband của bản mới nhất. <br>→ Ví dụ firmware 11.4.1 mới nhất của iP5S có baseband là <strong>8.55.00</strong></p>
-							<span class="image fit"><img src="images/1.6.PNG"/></span><br>
-							
-							<p>1.7 Vào <strong>Firmware</strong> chọn theo phiên bản baseband của bạn có đuôi là <strong>".bbfw"</strong> và copy ra ngoài. <br>→ Ví dụ 11.4.1 có baseband là <strong>8.55.00</strong> thì mình sẽ chọn <strong>Mav7Mav8-8.55.00.Release.bbfw</strong></p>
-							<span class="image fit"><img src="images/1.7.gif"/></span><br>
-							
-							<p>1.8 Tải <a href="https://apple.co/2mnsRA3"><strong>Battery Memory System Status Monitor</strong></a></p>
-							<span class="image fit"><img src="images/1.8.JPG"/></span><br>
-							
-							<p>1.9 Mở ứng dụng và chọn phần <strong>System</strong> ngay trên cùng, bạn sẽ thấy <strong>Device Model</strong> của bạn.</p>
-							<span class="image fit"><img src="images/1.9.JPG"/></span><br>
-							
-							<p>1.10 Vào tiếp <strong>all_flash</strong>, kéo xuống dưới cùng bạn sẽ thấy một loạt file có tên là <strong>sep-firmware</strong>, copy file sep có đuôi <strong>".imp4"</strong> trùng với Device model của bạn ở <strong>bước 1.9</strong>.</p>
-							<span class="image fit"><img src="images/1.10.gif"/></span><br>
-							
-							<p>1.11 Tải <strong>shsh</strong> của phiên bản bạn muốn Futurerestore (Nếu bạn dùng tsschecker để lưu shsh thì vào <strong>tsssaver</strong> để check xem shsh của bạn có valid hay không.</p>
-							<a href="https://tsssaver.1conan.com/check.php" class="button primary" target="_blank">Kiểm tra SHSH</a><br><br>
-							<span class="image fit"><img src="images/1.11.gif"/></span><br>
-							
-							<p>1.12 Tải <strong>Futurerestore fork</strong> của <strong>encounter</strong> (Nếu bạn tải bản chính chủ của tihmstar thì nên xoá đi vì nó không hoạt trên iOS 11).</p>
-							<a href="http://bit.ly/2zzgGJY" class="button primary icon fa-download" target="_blank">Futurerestore</a><br><br>
-							<span class="image fit"><img src="images/1.12.PNG"/></span><br>
-							
-							<p>1.13 Copy <strong>shsh</strong> và extract <strong>Futurerestore fork</strong> đã tải vào <strong>Futurerestore</strong>.</p>
-							<span class="image fit"><img src="images/1.13.PNG"/></span><br>
-							
-							<p>1.14 Xoá file zip và đổi tên file để dễ phân biệt.</p>
-							<span class="image fit"><img src="images/1.14.gif"/></span><br>
-							
-							<h2>2. Set nonce</h2>
-							
-							<p>2.1 Mở file shsh của bạn dưới notepad, <strong>ctrl + f</strong> rồi gõ <strong>"gene"</strong>, tìm đến "<strong>&lt;string&gt;0x......&lt;/string&gt;</strong>".<br>→ Ví dụ shsh 11.3.1 của mình có nonce là <strong>0xf44116d95df08a43</strong></p>
-							<span class="image fit"><img src="images/2.1.gif"/></span><br>
-							
-							<h3><strong>2.2 Set nonce</strong></h3>
-							<ul>
-							    <li><strong>iOS 10 → 10.2.1:</strong> Mở MTerminal hoặc NewTerm gõ</li><br>
-								<pre><code>Hieus-iphone:~ mobile$ su <br>password: alpine <br>Hieus-iphone:/var/mobile root# nvram com.apple.System.boot-nonce=0x.....'  </code></pre>
-								<p>
-				                Ví dụ shsh của mình có generator là <strong>0x66fd9ae6a407ddfa</strong> thì sẽ ghi là <strong>nvram com.apple.System.boot-nonce=0x66fd9ae6a407ddfa</strong>
-				                </p>
-								<span class="image fit"><img src="images/2.2.JPG"/></span>
-								<p>
-				                Gõ <strong>nvram -p</strong> để check lại.
-				                </p>
-								<span class="image fit"><img src="images/2.2.1.JPG"/></span>
-							</ul>											
-						</div>
-					</section>
-					
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a class="image"><img src="images/2.2.2.jpg" data-position="center center"/></a>
-							<div class="content">
-								<div class="inner">
-									<h2>iOS 10.3 → 10.3.3</h2>
-									<p>Cài v0rtexNonce qua Cydia Impactor hoặc Ext3nder Installer rồi mở app ghi đoạn generator của bạn vào.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/arx8x/v0rtexNonce/releases" class="button primary icon fa-download" target="_blank">v0rtexNonce</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a class="image"><img src="images/2.2.3.jpg" data-position="center center"/></a>
-							<div class="content">
-								<div class="inner">
-									<h2>iOS 11 → 11.1.2</h2>
-									<p>Cài NonceSet112 qua Cydia Impactor hoặc Ext3nder Installer rồi làm tương tự như 10.3 → 10.3.3</p>
-									<ul class="actions">
-										<li><a href="https://github.com/julioverne/NonceSet112" class="button primary icon fa-download" target="_blank">NonceSet112</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a class="image"><img src="images/2.2.4.PNG" data-position="center center"/></a>
-							<div class="content">
-								<div class="inner">
-									<h2>iOS 11.2 → 11.3.1/11.4b3</h2>
-									<p>Cài noncereboot1131 hoặc electra1131 qua Cydia Impactor hoặc Ext3nder Installer rồi làm tương tự như bước trên.</p>
-									<ul class="actions">
-										<li><a href="http://pwn20wnd.science/noncereboot1131UI/noncereboot1131UI.ipa" class="button primary icon fa-download" target="_blank">noncereboot1131</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-				<!-- Three -->
-					<section id="three" class="wrapper style4 fade-up">
-						<div class="inner">
-							<h2>3. Tiến hành</h2>
-							
-							<p>3.1 Shift + chuột phải chọn Open PowerShell window here (hoặc cmd) rồi gõ <code>.\futurerestore.exe</code> để kiểm tra futurerestore có báo lỗi gì không.</p>
-							<span class="image fit"><img src="images/3.1.gif"/></span><br>
-							
-							<p>3.2 Cắm điện thoại vào máy tính, tiếp tục trên PowerShell gõ <code>.\futurerestore.exe -w -t &lt;shsh của bạn&gt;</code></p>
-							<p>Nếu <strong>"waiting for nonce"</strong> trùng với <strong>"Got ApNonce from device"</strong> thì bạn đã set nonce thành công, còn nếu dòng <strong>"Got ApNonce from device"</strong> lặp lại liên tục thì bạn đã set sai generator.</p>
-							<span class="image fit"><img src="images/3.2.gif"/></span><br>
-							
-							<p>★ Đây là bước cuối cùng kiểm tra kỹ đã đủ file chưa, không dùng dây cáp lõng hoặc không có mfi (vì cáp không có chứng chỉ mfi không giao tiếp đc iPhone ở recovery mode), nếu xãy ra lỗi thì đừng vội restore trên itunes, tải <a href="https://www.tenorshare.com/products/reiboot.html" target="_blank">ReiBoot</a> và exit recovery mode rồi bắt đầu lại.</p>
-							
-							<p>3.3 Cắm điện thoại vào máy tính, trên PowerShell gõ</p>
-							<pre><code>.\futurerestore.exe -t &lt;iOS SHSH2 blob&gt; -b &lt;Baseband file&gt; -p BuildManifest.plist -s &lt;SEP file&gt; -m BuildManifest.plist &lt;iOS IPSW File&gt;</code></pre>
-							<p>Trong đó dấu "&lt;&gt;" là tên file của bạn. Ví dụ của mình là:</p>
-							<pre><code>.\futurerestore.exe -t blob.shsh2 -b baseband.bbfw -p BuildManifest.plist -s sep.im4p -m BuildManifest.plist 11.3.1.ipsw</code></pre>
-							<p>★ Tip: khi gõ lệnh chỉ cần nhấn nút tab thì nó sẽ tự động ghi toàn bộ tên file.</p>
-							
-							<p>Sau khi gõ xong lệnh thì kiểm tra lại xem thiếu gì không (nhất là file baseband vs sep), nếu không thì nhấn enter rồi chờ cho đến khi xong (Trong quá trình futurerestore đừng đụng vào điện thoại hoặc dây cáp, nếu bị lỏng có thể gây mất kết nối trong quá trình Futurerestore và buộc phải lên bản mới nhất qua iTunes).</p> 
-							<p>Nếu Futurerestore báo lỗi "failed with errorcode=-44" thì inbox mình nhé, đây là lỗi do img4tool trong futurerestore không đọc được shsh (vì từ iOS 11.3 trở lên apple gọp các thiết bị lại chung thành một bản iPSW).</p>
-							<p>Nếu báo lỗi gì thì contact mình qua messenger hoặc mail, link mình để phía dưới.</p>
-							
-							
-							<div class="video-container"><iframe src="https://www.youtube.com/embed/5tGPyR2NDWA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-							<br><p style="text-align:center">Sorry ae clip trên mình làm từ hồi iOS 10, nhưng cách làm đấy vẫn giống y hệt cách làm trong bài hướng dẫn này chỉ khác cách set nonce từ iOS 10.3 trở lên là phải set nonce bằng app (đơn giản hơn cách 10.2)</p>
-						</div>
-					</section>
+<body class="loading">
+<header class="header">
+	<div class="wrap">
+		<a class="header__avatar cc-active" href="https://hieuvo.me/"><img class="header__avatar__img" data-cms-original-src="/images/avatar.jpg" src="https://raw.githubusercontent.com/hieuvooo/hieuvooo.github.io/master/favicon.ico"></a> <a class="header__title cc-active" href="https://hieuvo.me/">Hieuvo</a>
+		<div class="menu">
+			<ul class="menu__list">
+				<li class="menu__list__item">
+					<a class="menu__list__item__link" href="https://hieuvo.me/About/">About</a>
+				</li>
+				<li class="menu__list__item">
+					<a class="menu__list__item__link" href="contact.html">Contact</a>
+				</li>
+				<li class="menu__list__item">
+					<a class="menu__list__item__link" href="https://hieuvo.me/Files/">Files</a>
+				</li>
+				<li class="menu__list__item">
+					<a class="menu__list__item__link" href="https://hieuvo.me/staticrypt/">Encrypt</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
 
+<div class="page">
+	<div class="page__content">
+		<section class="listing single">
+			<div class="wrap">
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="blog/Shortcuts.html">Shortcuts | Frame Screenshot</a></h2>
+						<p class="listing-post__subtitle">06 October 2018</p>
+					</div><a class="listing-post__image" style="background-image: url(images/Shortcuts.png);" href="blog/Shortcuts.html"></a>
+					<div class="listing-post__content">
+						<p>Frame your screenshot using Siri Shortcuts.</p>
+					</div>
+				</article>
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="https://hieuvo.me/Futurerestore/">Futurerestore | iOS Unsigned </a></h2>
+						<p class="listing-post__subtitle">21 July 2018</p>
+					</div><a class="listing-post__image" style="background-image: url(images/Futurerestore.PNG);" href="https://hieuvo.me/Futurerestore/"></a>
+					<div class="listing-post__content">
+						<p>Futurerestore đã được phát hành bởi <a href="https://goo.gl/JtAkM6" target="_blank">@tihmstar</a>. Một công cụ giúp bạn có thể Upgrade/Downgrade iPhone, iPad của bạn về một phiên bản iOS đã khóa Sign nếu như bạn có SHSH Blobs cho phiên bản đó.</p>
+					</div>
+				</article>
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="https://hieuvo.me/iOS">Apple Beta Program | WWDC 2018 </a></h2>
+						<p class="listing-post__subtitle">04 June 2018</p>
+					</div><a class="listing-post__image" style="background-image: url(images/beta.PNG);" href="https://hieuvo.me/iOS"></a>
+					<div class="listing-post__content">
+						<p>As a member of the Apple Beta Software Program, you can take part in shaping Apple software by test-driving pre-release versions and letting us know what you think.</p>
+					</div>
+				</article>
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="https://hieuvo.me/translate/">Bộ cuyển dổi Tiếq Việt</a></h2>
+						<p class="listing-post__subtitle">25 November 2017</p>
+					</div><a class="listing-post__image" style="background-image: url(images/translate.png);" href="https://hieuvo.me/translate/"></a>
+					<div class="listing-post__content">
+					</div>
+				</article>
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="blog/Chatbot.html">Facebook Messenger | Personal Chatbot </a></h2>
+						<p class="listing-post__subtitle">09 November 2017</p>
+					</div><a class="listing-post__image" style="background-image: url(images/Chatbot.png);" href="blog/Chatbot.html"></a>
+					<div class="listing-post__content">
+						<p>Tạo Chatbot cho Facebook cá nhân.</p>
+					</div>
+				</article>
+				<article class="listing-post">
+					<div class="listing-post__header">
+						<h2 class="listing-post__title"><a href="https://hieuvo.me/Theme/">Facebook Theme | J2Team </a></h2>
+						<p class="listing-post__subtitle">31 October 2017</p>
+					</div><a class="listing-post__image" style="background-image: url(images/Theme.JPG);" href="https://hieuvo.me/Theme/"></a>
+					<div class="listing-post__content">
+					</div>
+				</article>
 			</div>
+		</section>
+	</div>
+</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<section id="four" class="wrapper style1-alt fullscreen fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>I could make an english vers if u want, just hit me up xD
-							<div class="split style1">
-								<section>
-									<form method="post" action="https://formspree.io/support@hieuvo.me">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-										    <h3>Mail</h3>
-											<a href="mailto:hieuvo@hieuvo.me">hieuvo@hieuvo.me</a>
-										</li>									
-										<li>
-											<h3>Support</h3>
-											<a href="mailto:support@hieuvo.me">Support@hieuvo.me</a>
-										</li>	
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://twitter.com/KimJongUnnnnnnn" class="fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-												<li><a href="https://m.me/hieuvolol" class="fa-facebook-square" target="_blank"><span class="label">Facebook</span></a></li>
-												<li><a href="https://www.instagram.com/hieuvo.me/" class="fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-												<li><a href="https://www.youtube.com/channel/UCKVb9nyxT-u1SxVe9KJnEKA" class="fa-youtube-play" target="_blank"><span class="label">Youtube</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-			</footer>
+<footer class="footer">
+	<div class="footer__copyright">
+		<span>© 2018 Hieuvo.</span>
+	</div>
+</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+<script src="js/jquery.min.js"></script> 
+<script src="js/simples-min.js"></script>
+
+</body>
 </html>
